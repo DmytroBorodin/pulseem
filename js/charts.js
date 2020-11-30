@@ -20,6 +20,17 @@ pieChart1.data = [{
 pieChart1.innerRadius = am4core.percent(55.55);
 pieChart1.radius = am4core.percent(100);
 
+series.ticks.template.disabled = true;
+series.alignLabels = false;
+series.labels.template.text = "{type}{value}";
+series.labels.template.radius = am4core.percent(-20);
+series.labels.template.fill = am4core.color("#00000");
+series.labels.template.fontSize = '2rem';
+series.labels.template.contentAlign = 'center';
+series.labels.template.pixelWidth = '60';
+series.labels.template.pixelHeight = '60';
+console.log(series.labels.template);
+
 
 /*let setElement = (elName, elClass, elCont) => {
 	let newElement = document.createElement(elName);
