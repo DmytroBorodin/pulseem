@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&display=swap');
+/*Reset*/
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+a, img, button, input {
+  display: block;
+}
+a, img, button {
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+button:focus, input:focus {
+  outline: none;
+}
+ul {
+  list-style-type: none;
+}
+/*Main settings*/
+html {
+  font-size: 10px;
+  font-family: 'Assistant';
+  font-weight: 400;
+  color:#000;
+}
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 8.2fr;
+  height: 100vh;
+}
+.sidebar {
+  width: 208px;
+background: rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.main {
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+  height: 65px;
+  background: rgba(0, 0, 0, 0.55);
+}
+.main__wrap {
+  height: calc(100% - 65px);
+  display: grid;
+  grid-template-columns: 4.69fr 1fr;
+  background-color: #F2F2F2;
+}
+.main__sidebar {
+  background: #D7D7D7;
+  width: 300px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main__sidebar__title {
+  font-size: 2.5rem;
+  line-height: 3.3rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 2.1rem;
+}
+.main__sidebar__text {
+  width: 60%;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 20%;
+}
+.shortcard__add__block {
+  position: relative;
+  padding-top: 29.33%;
+  width: 88.33%;
+  background: #fff;
+  border-radius: 20px;
+  margin-bottom: 16.7%;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+  }
+}
+.add__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  font-size: 35px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 1px;
+      background: #000;
+    }
+    &:before {
+      transform: translate(-50%, -50%);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-90deg) ;
+    }
+  }
+}
+@media screen and (min-width: 1915px) {
+  .sidebar {
+    width: 100%;
+  }
+  .main__sidebar {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .sidebar {
+    width: 188px;
+  }
+  .main__sidebar {
+    width: 270px;
+  }
+}
