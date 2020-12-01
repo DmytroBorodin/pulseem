@@ -101,19 +101,24 @@ a.content__status__value {
 	height: 100%;
 }
 .chart {
-	width: 28.23%;
+	width: 262px;
 }
 .pie__chart {
 	position: relative;
 	width: 100%;
 	padding-top: 100%;
 }
+.pie__chart .disabled {
+	.chart__label {
+		display: none;
+	}
+}
 .labels__block {
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 70%;
-	height: 70%;
+	width: 68%;
+	height: 68%;
 	position: absolute;
 	z-index: 4;
 }
@@ -124,30 +129,31 @@ a.content__status__value {
 }
 .pie__chrat__bg {
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 80%;
-	height: 80%;
+	width: 78%;
+	height: 78%;
 	border-radius: 50%;
 	background-color: #F9F9F9;
 }
 #pie__chart__1, #pie__chart__2 {
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(-30deg);
-	width: 70%;
-	height: 70%;
+	width: 68%;
+	height: 68%;
 	z-index: 2;
 }
 .chart__title {
 	font-size: 2rem;
 	text-align: center;
+	font-weight: 400;
 }
 .chart__text {
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-transform: uppercase;
@@ -159,19 +165,29 @@ a.content__status__value {
 	width: 40%;
 }
 .chart__label {
-	width: 6rem;
-	height: 6rem;
+	width: 6.6rem;
+	height: 6.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	border-radius: 50%;
 	position: absolute;
 	background: #fff;
 	border-radius: 50%;
 	box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 	transform: translate(-50%, -50%);
+	font-size: 1.6rem;
+	color: #000;
+	& span:first-child {
+		font-weight: 700;
+	}
 }
 .chart.th .pie__chrat__bg {
 	border: 1px solid #D7D7D7;
 }
 .chart.th .chart__text {
+	top: 45%;
 	width: 100%;
 	text-transform: none;
 	font-size: 2rem;
@@ -345,6 +361,10 @@ g[aria-labelledby=id-393-title] {
 polyline {
 	display: none;
 }
+
+
+
+
 @media screen and (max-width: 1440px) {
 
 }

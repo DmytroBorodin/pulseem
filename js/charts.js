@@ -1,5 +1,5 @@
-let labelsBlock = document.querySelector('.labels__block__inner');
-let chartLegend = document.querySelector('.chart__legend');
+
+let pieChartsBlock = document.querySelector('.charts__block');
 let pieChart1 = am4core.create("pie__chart__1", am4charts.PieChart);
 let series = pieChart1.series.push(new am4charts.PieSeries());
 series.dataFields.value = "value";
@@ -7,90 +7,32 @@ series.dataFields.category = "type";
 
 pieChart1.data = [{
   "type": "Active",
-  "value": 8
+  "value": 5
 }, {
   "type": "Error",
-  "value": 5
+  "value": 230
 },{
   "type": "Removed",
-  "value": 23
+  "value": 105
 }];
 
 
 pieChart1.innerRadius = am4core.percent(55.55);
 pieChart1.radius = am4core.percent(100);
 
-series.ticks.template.disabled = true;
-series.alignLabels = false;
-series.labels.template.text = "{type}{value}";
-series.labels.template.radius = am4core.percent(-20);
-series.labels.template.fill = am4core.color("#00000");
-series.labels.template.fontSize = '2rem';
-series.labels.template.contentAlign = 'center';
-series.labels.template.pixelWidth = '60';
-series.labels.template.pixelHeight = '60';
-console.log(series.labels.template);
 
-
-/*let setElement = (elName, elClass, elCont) => {
-	let newElement = document.createElement(elName);
-	newElement.classList.add(elClass);
-	newElement.innerText = elCont;
-	return newElement;
-}
-
-let coordinatesArr = [];
-
-let total = 0;
-
-for (let i = 0; i < pieChart1.data.length; i ++) {
-	let chartLabel = setElement('div', 'chart__label', '');
-	labelsBlock.append(chartLabel);
-	total += pieChart1.data[i].value;
-}
-
-
-let minSector = 360/total;
-let chartRadius = labelsBlock.offsetWidth/2;
-
-let labelsArr = [...document.querySelectorAll('.chart__label ')];
-let sum = 0;
-
-for (let i = 0; i < pieChart1.data.length; i++) {
-	sum += pieChart1.data[i].value;
-	let angel;
-	if (sum <= 120) {
-		angel = (-sum-40)*Math.PI/180;
-	}
-	console.log(angel);
-	let x = Math.cos(angel);
-	let y = Math.sin(angel);
-	let coordinates = {};
-	coordinates.x = x*chartRadius + chartRadius;
-	coordinates.y = y*chartRadius + chartRadius;
-	coordinatesArr.push(coordinates);
-}
-
-console.log(coordinatesArr);
-
-labelsArr.forEach(item => {
-	let index = labelsArr.indexOf(item);
-	item.style.top = `${coordinatesArr[index].y}px`;
-	item.style.left = `${coordinatesArr[index].x}px`;
-})*/
-
-var pieChart2 = am4core.create("pie__chart__2", am4charts.PieChart);
+let pieChart2 = am4core.create("pie__chart__2", am4charts.PieChart);
 
 // Add data
 pieChart2.data = [{
   "type": "Active",
-  "value": 10
+  "value": 100
 }, {
   "type": "Active",
-  "value": 10
+  "value": 500
 }, {
   "type": "Active",
-  "value": 10
+  "value": 247
 }];
 
 // Add and configure Series
@@ -217,3 +159,115 @@ createGrid2(25);
 createGrid2(50);
 createGrid2(75);
 createGrid2(100);
+
+
+
+
+let setElement = (elName, elClass, elCont) => {
+	let newElement = document.createElement(elName);
+	newElement.classList.add(elClass);
+	newElement.innerText = elCont;
+	return newElement;
+}
+
+let pieChartsArr = [pieChart1, pieChart2];
+let pieChartsBlocksArr = [...pieChartsBlock.querySelectorAll('.pie__chart')];
+
+
+
+	pieChartsArr.forEach(chart => {
+		let chartIndex = pieChartsArr.indexOf(chart);
+
+		let labelsBlock = pieChartsBlocksArr[chartIndex].querySelector('.labels__block__inner');;
+
+		coordinatesArr = [];
+		let total = 0;
+
+		for (let i = 0; i < chart.data.length; i ++) {
+			let chartLabel = setElement('div', 'chart__label', '');
+			let labelVal = setElement('span', 'span', `${chart.data[i].value}`);
+			let labelName = setElement('span', 'span', `${chart.data[i].type}`);
+			chartLabel.append(labelVal);
+			chartLabel.append(labelName);
+			labelsBlock.append(chartLabel);
+			total += chart.data[i].value;
+		}
+
+		let minSector = 360/total;
+		let chartRadius = labelsBlock.offsetWidth/2;
+		let labelsArr = [...pieChartsBlocksArr[chartIndex].querySelectorAll('.chart__label ')];
+		let sum = 0;
+
+		for (let i = 0; i < chart.data.length; i++) {
+			sum += chart.data[i].value;
+			let angel = (sum*minSector - 120)*Math.PI/180;
+			let sectorAngel = (chart.data[i].value*minSector/2)*Math.PI/180;
+			let x = Math.cos(angel - sectorAngel);
+			let y = Math.sin(angel - sectorAngel);
+			
+			let coordinates = {};
+			coordinates.x = x*chartRadius + chartRadius;
+			coordinates.y = y*chartRadius + chartRadius;
+			coordinatesArr.push(coordinates);
+		}
+
+		labelsArr.forEach(item => {
+			let index = labelsArr.indexOf(item);
+			item.style.top = `${coordinatesArr[index].y}px`;
+			item.style.left = `${coordinatesArr[index].x}px`;
+		})
+	})
+
+
+/*let coordinatesArr = [];
+
+let total = 0;
+
+for (let i = 0; i < pieChart1.data.length; i ++) {
+	let chartLabel = setElement('div', 'chart__label', '');
+	let labelVal = setElement('span', 'span', `${pieChart1.data[i].value}`);
+	let labelName = setElement('span', 'span', `${pieChart1.data[i].type}`);
+	chartLabel.append(labelVal);
+	chartLabel.append(labelName);
+	labelsBlock.append(chartLabel);
+	total += pieChart1.data[i].value;
+}
+
+
+let minSector = 360/total;
+let chartRadius = labelsBlock.offsetWidth/2;
+
+let labelsArr = [...document.querySelectorAll('.chart__label ')];
+let sum = 0;
+
+for (let i = 0; i < pieChart1.data.length; i++) {
+	sum += pieChart1.data[i].value;
+	let angel = (sum*minSector - 120)*Math.PI/180;
+	let sectorAngel = (pieChart1.data[i].value*minSector/2)*Math.PI/180;
+	console.log(angel);
+	let x = Math.cos(angel - sectorAngel);
+	let y = Math.sin(angel - sectorAngel);
+	if (angel <= 90) {
+		x = Math.cos(angel - sectorAngel);
+		y = Math.sin(angel - sectorAngel);
+		console.log(x, y);
+	}
+	if (angel >= 270 && sum <= 360) {
+		x = Math.cos(angel - sectorAngel);
+		y = -Math.sin(angel - sectorAngel);
+	}
+	
+	let coordinates = {};
+	coordinates.x = x*chartRadius + chartRadius;
+	coordinates.y = y*chartRadius + chartRadius;
+	coordinatesArr.push(coordinates);
+}
+
+console.log(coordinatesArr);
+
+labelsArr.forEach(item => {
+	let index = labelsArr.indexOf(item);
+	item.style.top = `${coordinatesArr[index].y}px`;
+	item.style.left = `${coordinatesArr[index].x}px`;
+})
+*/
