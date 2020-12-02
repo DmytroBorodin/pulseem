@@ -74,7 +74,7 @@ shortCardsArr.forEach(card => {
 								shortCardOption2.innerText = options[1];
 								card.append(shortCardBlock);
 								selectOptionBlock[1].classList.add('disabled');
-
+								card.classList.add('active');
 							}, 1000)
 						}
 					})
@@ -84,4 +84,10 @@ shortCardsArr.forEach(card => {
 	})
 }) 
 
+new Swiper('.chart__slider', {
+	navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
 

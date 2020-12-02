@@ -51,12 +51,15 @@ let val1 = 60;
 let val2 = 100 - val1;
 
 pieChart3.data = [{
-  "value": val1
+  "value": val1,
+  "color": am4core.color("#6DE600"),
 },{
-  "value": val2
+  "value": val2,
+  "color": am4core.color("#E0FAC6"),
 }];
 
-pieChart3.innerRadius = am4core.percent(90);
+series3.slices.template.propertyFields.fill = "color";
+pieChart3.innerRadius = am4core.percent(95);
 pieChart3.radius = am4core.percent(100);
 
 
@@ -66,19 +69,19 @@ xyChart1.paddingBottom = -10;
 xyChart1.data = [
 	{
 		"action": "Opens",
-		"value": 90
+		"value": 90,
 	},
 	{
 		"action": "Clicks",
-		"value": 48
+		"value": 48,
 	},
 	{
 		"action": "Errors",
-		"value": 12
+		"value": 12,
 	},
 	{
 		"action": "Removed",
-		"value": 39
+		"value": 39,
 	},
 ]
 
@@ -101,7 +104,10 @@ function createGrid(value) {
 
 xySeries.dataFields.valueY = "value";
 xySeries.dataFields.categoryX = "action";
+xySeries.columns.template.fill = am4core.color("#0371AD");
 xySeries.columns.template.width = am4core.percent(10);
+xySeries.columns.template.column.cornerRadiusTopLeft = 3;
+xySeries.columns.template.column.cornerRadiusTopRight = 3;
 
 createGrid(0);
 createGrid(25);
@@ -153,6 +159,9 @@ function createGrid2(value) {
 xySeries2.dataFields.valueY = "value";
 xySeries2.dataFields.categoryX = "action";
 xySeries2.columns.template.width = am4core.percent(10);
+xySeries2.columns.template.fill = am4core.color("#0371AD");
+xySeries2.columns.template.column.cornerRadiusTopLeft = 3;
+xySeries2.columns.template.column.cornerRadiusTopRight = 3;
 
 createGrid2(0);
 createGrid2(25);

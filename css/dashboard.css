@@ -1,3 +1,7 @@
+.content__wrap {
+  width: 100%;
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -5,11 +9,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: auto;
+  min-width: 0;
 }
 
 .row {
   display: flex;
+  min-width: 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -23,6 +28,7 @@
   background-color: #fff;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.35);
   display: flex;
+  min-width: 0;
   flex-direction: column;
   align-items: center;
 }
@@ -38,6 +44,7 @@
   line-height: 2.9rem;
   font-family: "Assistant";
   font-weight: 600;
+  color: #0371AD;
 }
 
 .f__block .content__block__subtitle,
@@ -57,7 +64,7 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 0.9rem;
-  border: 1px solid #D7D7D7;
+  background-color: #0371AD;
 }
 
 .content__status__block:last-child {
@@ -65,8 +72,8 @@
 }
 
 .content__status__block.disabled {
-  background: #F2F2F2;
-  border: none;
+  border: 1px solid #0371AD;
+  background-color: #fff;
 }
 
 .cotent__status__title {
@@ -74,7 +81,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.1rem;
-  color: #7F7F7F;
+  color: #fff;
 }
 
 .content__status__value {
@@ -84,18 +91,26 @@
 
 p.content__status__value {
   font-weight: 700;
-  color: #000;
+  color: #fff;
 }
 
 a.content__status__value {
   font-weight: 300;
-  color: #7F7F7F;
+  color: #0371AD;
   text-decoration: underline;
+}
+
+.content__status__block.disabled p {
+  color: #0371AD;
 }
 
 .s__block {
   width: 69.25%;
   height: 32.5rem;
+}
+
+.content__block.s__block {
+  display: block;
 }
 
 .content__block__header {
@@ -108,6 +123,7 @@ a.content__status__value {
 .fs__block .content__block__title {
   font-size: 2rem;
   line-height: 2.6rem;
+  color: #0371AD;
 }
 
 .charts__block {
@@ -115,11 +131,11 @@ a.content__status__value {
   justify-content: center;
   padding: 0.97% 0 0.97%;
   width: 100%;
-  height: 100%;
 }
 
 .chart {
   width: 262px;
+  margin: 0 auto;
 }
 
 .pie__chart {
@@ -257,6 +273,7 @@ a.content__status__value {
   font-size: 2.6rem;
   line-height: 3.5rem;
   margin-bottom: 9.89%;
+  color: #0371AD;
 }
 .th__block .content__block__title span {
   font-weight: 400;
@@ -270,6 +287,10 @@ a.content__status__value {
 .fs__block {
   height: 35rem;
   width: 76.34%;
+}
+
+.fs__block .content__block__header {
+  padding: 1.2rem 2.8rem 0.5rem;
 }
 
 .content__block__body {
@@ -319,12 +340,14 @@ a.content__status__value {
   padding: 0.6rem 1rem;
   border-radius: 0.4rem;
   font-size: 2rem;
+  line-height: 2.6rem;
   font-weight: 400;
-  color: #000;
+  color: #797979;
 }
 
 .content__btn.active {
-  background: #797979;
+  background: #0371AD;
+  color: #fff;
 }
 
 #pie__chart__3 {
@@ -339,15 +362,21 @@ a.content__status__value {
 .content__block__body .pie__chart {
   width: 63%;
   padding-top: 63%;
-  margin-left: 17.5%;
+  margin-left: 2.8rem;
+}
+
+.content__block__body .chart {
+  margin: 0 0 0 0;
 }
 
 .content__block__body .chart__text {
   top: 55%;
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
   border-radius: 50%;
-  background: #F9F9F9;
+  background: #E0FAC6;
+  color: #6DE600;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -355,7 +384,7 @@ a.content__status__value {
 }
 
 .main__text__block {
-  margin-left: 17.5%;
+  margin-left: 2.8rem;
 }
 
 .main__text {
@@ -365,7 +394,6 @@ a.content__status__value {
 
 .main__text.s {
   margin-top: 1.5rem;
-  margin-left: 5%;
 }
 
 .submain__text {
@@ -384,8 +412,8 @@ a.content__status__value {
 
 .right__chart {
   position: relative;
-  width: 55.91%;
-  padding-top: 25.56%;
+  width: 572px;
+  padding-top: 261px;
 }
 
 #xy__chart__1, #xy__chart__2 {
@@ -408,14 +436,155 @@ g[aria-labelledby=id-189-title] {
   display: none;
 }
 
-g[aria-labelledby=id-253-title] {
+g[aria-labelledby=id-258-title] {
   display: none;
 }
 
-g[aria-labelledby=id-393-title] {
+g[aria-labelledby=id-398-title] {
   display: none;
 }
 
 polyline {
   display: none;
+}
+
+/* Slider settings */
+.slick-list {
+  width: 100%;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.right-arrow {
+  transform: rotate(180deg);
+  right: 14px;
+}
+
+.left-arrow {
+  left: 14px;
+}
+
+.slide-arrow {
+  top: 11px;
+  width: 20px;
+  position: absolute;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1700px) {
+  .chart {
+    width: 240px;
+  }
+
+  .right__chart {
+    width: 520px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .chart__label {
+    width: 5.6rem;
+    height: 5.6rem;
+    font-size: 1.4rem;
+  }
+
+  .main__text {
+    font-size: 1.8rem;
+  }
+
+  .slide__block .chart {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .s__block, .f__block, .th__block, .fs__block {
+    height: auto;
+  }
+
+  .row {
+    align-items: stretch;
+  }
+}
+@media screen and (max-width: 1368px) {
+  .s__block, .f__block, .th__block, .fs__block {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .fs__block {
+    margin-bottom: 0;
+  }
+
+  .f__block {
+    padding: 1.56% 0 2.2%;
+  }
+
+  .container {
+    justify-content: flex-start;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  .f__block .content__block__subtitle, .th__block .content__block__subtitle {
+    margin-bottom: 2.16%;
+  }
+
+  .content__status__block {
+    width: 80%;
+    margin-bottom: 1.5rem;
+    padding: 2.72% 2.17%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.9rem;
+    background-color: #0371AD;
+  }
+
+  .tip__icon {
+    width: 20%;
+    margin-bottom: 0.7rem;
+  }
+
+  .th__block .content__block__title {
+    margin-bottom: 3%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide__block .chart {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__sidebar {
+    padding-top: 5%;
+  }
+
+  .main__sidebar__title, .main__sidebar__text, .options__block {
+    display: none;
+  }
+
+  .shortcard__add__block {
+    display: none;
+  }
+
+  .shortcard__add__block.completed {
+    display: flex;
+    margin-bottom: 5%;
+  }
+
+  .options__block {
+    display: none;
+  }
 }

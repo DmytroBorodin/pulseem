@@ -33,17 +33,17 @@ html {
   color:#000;
 }
 .wrap {
-  display: grid;
-  grid-template-columns: 1fr 8.2fr;
-  height: 100vh;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
 }
 .sidebar {
   width: 208px;
-background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.35);
   overflow: auto;
 }
 .main {
-  width: 100%;
+  width: calc(100% - 208px);
 }
 .navbar {
   width: 100%;
@@ -52,13 +52,15 @@ background: rgba(0, 0, 0, 0.35);
 }
 .main__wrap {
   height: calc(100% - 65px);
-  display: grid;
-  grid-template-columns: 4.69fr 1fr;
+  display: flex;
   background-color: #F2F2F2;
+}
+.content__wrap {
+  width: calc(100% - 300px);
 }
 .main__sidebar {
   position: relative;
-  background: #D7D7D7;
+  background: #fff;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -167,7 +169,7 @@ background: rgba(0, 0, 0, 0.35);
   height: 30px;
   font-size: 35px;
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 1px solid #0371AD;
   span {
     display: block;
     width: 100%;
@@ -181,7 +183,7 @@ background: rgba(0, 0, 0, 0.35);
       left: 50%;
       width: 18px;
       height: 1px;
-      background: #000;
+      background: #0371AD;
     }
     &:before {
       transform: translate(-50%, -50%);
@@ -225,17 +227,54 @@ background: rgba(0, 0, 0, 0.35);
 
 @media screen and (min-width: 1915px) {
   .sidebar {
-    width: 100%;
+    width: 10.8%;
   }
-  .main__sidebar {
-    width: 100%;
+  .main {
+    width: 89.2%;
   }
 }
 @media screen and (max-width: 1440px) {
   .sidebar {
     width: 188px;
   }
+  .main {
+      width: calc(100% - 188px);
+  }
+}
+@media screen and (max-width: 1368px) {
+  .sidebar {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+  .main {
+    width: calc(100%);
+  }
+}
+@media screen and(max-width: 1024px) {
   .main__sidebar {
-    width: 270px;
+    width: 250px;
+  }
+  .content__wrap {
+    width: calc(100% - 250px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__wrap {
+      height: calc(100% - 65px);
+      flex-direction: column;
+  }
+  .main__sidebar {
+    width: 94.9%;
+    margin: 2.69% 2.55% 5.52%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.35);
+  }
+  .content__wrap {
+    width: 100%;
+    order: 2;
   }
 }
