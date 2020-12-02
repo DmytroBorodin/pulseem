@@ -78,7 +78,9 @@
                                                 </h3>
                                                 <div class="pie__chart">
                                                     <p class="chart__text">
-                                                        total 8,879
+                                                        total <span class="total__val">
+                                                            130,000
+                                                        </span>
                                                     </p>
                                                     <div class="labels__block">
                                                         <div class="labels__block__inner">
@@ -96,7 +98,9 @@
                                                 </h3>
                                                 <div class="pie__chart disabled">
                                                     <p class="chart__text">
-                                                        total 130,000
+                                                        total <span class="total__val">
+                                                            130,000
+                                                        </span>
                                                     </p>
                                                     <div class="labels__block">
                                                         <div class="labels__block__inner">
@@ -158,6 +162,9 @@
                                     </div>
                                      <div class="content__block__body" id='newsletter'>
                                         <div class="chart">
+                                            <h3 class="chart__title">
+                                                Newsletter
+                                            </h3>
                                             <div class="main__text__block">
                                                 <p class="main__text">
                                                     Winter specials campaign
@@ -169,6 +176,24 @@
                                                         12/9/20
                                                     </span>
                                                 </p>
+                                                <ul class="main__list">
+                                                    <li>
+                                                        <span class="list__item__name">Opens</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="list__item__name">Clicks</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="list__item__name">Errors</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="list__item__name">Removed</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                </ul>
                                             </div>
                                             <div class="pie__chart">
                                                 <p class="chart__text">
@@ -188,6 +213,9 @@
                                     </div>
                                     <div class="content__block__body s none">
                                         <div class="chart">
+                                            <h3 class="chart__title">
+                                                SMS
+                                            </h3>
                                             <div class="main__text__block">
                                                 <p class="main__text">
                                                     October 20
@@ -199,6 +227,24 @@
                                                         12/9/20
                                                     </span>
                                                 </p>
+                                                <ul class="main__list">
+                                                    <li>
+                                                        <span class="list__item__name">Opens</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="list__item__name">Clicks</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="list__item__name">Errors</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="list__item__name">Removed</span>
+                                                        <span class="list__item__val">0</span>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                         <div class="right__chart">
@@ -295,11 +341,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="shortcard__add__block">
+                        <div class="shortcard__add__block completed">
                             <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
                             <button class="add__btn">
                                 <span></span>
                             </button>
+                            <div class="shortcard__block">
+                                <div class="shortcard">
+                                    <p class="option__text">SMS</p>
+                                    <p class="option__text">SMS</p>
+                                    <img src="imgs/pencil.svg" class='edit__btn' alt="">
+                                </div>
+                            </div>
                         </div>
                         <div class="shortcard__add__block">
                             <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
@@ -338,7 +391,7 @@
               nextArrow: '<img src="imgs/left-arrow (1).svg" class="slide-arrow right-arrow" alt="">',
                responsive: [
                     {
-                      breakpoint: 992,
+                      breakpoint: 993,
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

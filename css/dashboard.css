@@ -1,3 +1,4 @@
+/* Main settings */
 .content__wrap {
   width: 100%;
 }
@@ -33,6 +34,7 @@
   align-items: center;
 }
 
+/* First block */
 .f__block {
   width: 27.46%;
   height: 32.5rem;
@@ -104,6 +106,7 @@ a.content__status__value {
   color: #0371AD;
 }
 
+/* Second block */
 .s__block {
   width: 69.25%;
   height: 32.5rem;
@@ -255,6 +258,7 @@ a.content__status__value {
   text-decoration: underline;
 }
 
+/* Third block */
 .th__block {
   height: 35rem;
   width: 21.12%;
@@ -284,6 +288,7 @@ a.content__status__value {
   text-align: center;
 }
 
+/* Fourth block */
 .fs__block {
   height: 35rem;
   width: 76.34%;
@@ -410,6 +415,24 @@ a.content__status__value {
   margin-left: 1rem;
 }
 
+.main__list {
+  display: none;
+}
+
+.main__list li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  color: #555555;
+}
+.main__list li span {
+  line-height: 5.2rem;
+}
+
+.content__block__body .chart__title {
+  display: none;
+}
+
 .right__chart {
   position: relative;
   width: 572px;
@@ -473,7 +496,7 @@ polyline {
 
 .slide-arrow {
   top: 11px;
-  width: 20px;
+  width: 25px;
   position: absolute;
   z-index: 10;
 }
@@ -489,8 +512,8 @@ polyline {
 }
 @media screen and (max-width: 1600px) {
   .chart__label {
-    width: 5.6rem;
-    height: 5.6rem;
+    width: 6rem;
+    height: 6rem;
     font-size: 1.4rem;
   }
 
@@ -522,7 +545,7 @@ polyline {
   }
 
   .f__block {
-    padding: 1.56% 0 2.2%;
+    padding: 1.56% 0 7.74%;
   }
 
   .container {
@@ -561,17 +584,28 @@ polyline {
     margin-bottom: 3%;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
+  .content__wrap {
+    width: calc(100% - 250px);
+  }
+}
+@media screen and (max-width: 993px) {
+  .content__wrap {
+    width: calc(100% - 25.8%);
+  }
+}
+@media screen and (max-width: 993px) {
   .slide__block .chart {
     width: 290px;
   }
 }
 @media screen and (max-width: 768px) {
-  .main__sidebar {
-    padding-top: 5%;
+  .content__wrap {
+    width: 100%;
+    order: 2;
   }
 
-  .main__sidebar__title, .main__sidebar__text, .options__block {
+  .th__block {
     display: none;
   }
 
@@ -582,9 +616,83 @@ polyline {
   .shortcard__add__block.completed {
     display: flex;
     margin-bottom: 5%;
+    width: 100%;
   }
 
   .options__block {
     display: none;
+  }
+
+  .fs__block .content__block__header {
+    padding: 1.72% 1% 1.29% 2.48%;
+  }
+
+  .content__block__body {
+    padding: 0% 2.48% 0% 2.48%;
+  }
+
+  .content__block__body.none {
+    height: auto;
+    opacity: 1;
+    overflow: auto;
+    margin-top: 0;
+    padding-top: 2.2rem;
+    border-top: 1px solid #D7D7D7;
+  }
+
+  .content__btns__block {
+    display: none;
+  }
+
+  .time__text {
+    display: none;
+  }
+
+  .content__block__body .chart {
+    width: 100%;
+  }
+
+  .content__block__body .pie__chart {
+    display: none;
+  }
+
+  .main__text__block {
+    margin-left: 0;
+  }
+
+  .main__text.s {
+    display: none;
+  }
+
+  .content__block__body .chart__title {
+    display: block;
+    margin-bottom: 5.4%;
+  }
+
+  .main__list {
+    display: block;
+  }
+
+  .main__text {
+    font-size: 1.6rem;
+  }
+
+  .submain__text {
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .submain__text .users {
+    width: 1.5rem;
+  }
+
+  .right__chart {
+    display: none;
+  }
+}
+@media screen and (max-width: 374px) {
+  .content__block {
+    width: 297px;
+    margin: 0 auto 3rem;
   }
 }

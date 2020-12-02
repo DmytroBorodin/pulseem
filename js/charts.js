@@ -1,5 +1,6 @@
 
 let pieChartsBlock = document.querySelector('.charts__block');
+let pieChartTotalText = [...document.querySelectorAll('.total__val')];
 let pieChart1 = am4core.create("pie__chart__1", am4charts.PieChart);
 let series = pieChart1.series.push(new am4charts.PieSeries());
 series.dataFields.value = "value";
@@ -184,6 +185,7 @@ let pieChartsBlocksArr = [...pieChartsBlock.querySelectorAll('.pie__chart')];
 
 
 
+let pieChartLabelsCreator = () => {
 	pieChartsArr.forEach(chart => {
 		let chartIndex = pieChartsArr.indexOf(chart);
 
@@ -201,6 +203,8 @@ let pieChartsBlocksArr = [...pieChartsBlock.querySelectorAll('.pie__chart')];
 			labelsBlock.append(chartLabel);
 			total += chart.data[i].value;
 		}
+
+		pieChartTotalText[chartIndex].innerText = total;
 
 		let minSector = 360/total;
 		let chartRadius = labelsBlock.offsetWidth/2;
@@ -226,6 +230,12 @@ let pieChartsBlocksArr = [...pieChartsBlock.querySelectorAll('.pie__chart')];
 			item.style.left = `${coordinatesArr[index].x}px`;
 		})
 	})
+}
+
+
+pieChartLabelsCreator();
+
+/*window.addEventListener('resize', pieChartLabelsCreator);*/
 
 
 /*let coordinatesArr = [];

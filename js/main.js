@@ -84,10 +84,4 @@ shortCardsArr.forEach(card => {
 	})
 }) 
 
-new Swiper('.chart__slider', {
-	navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-})
 
