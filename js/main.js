@@ -1,5 +1,4 @@
 'use strict'
-
 let fsBlock = document.querySelector('.fs__block');
 let bodyBlocksArr = [...fsBlock.querySelectorAll('.content__block__body')];
 let blockButtonsArr = [...fsBlock.querySelectorAll('.content__btn')];
@@ -57,7 +56,10 @@ shortCardsArr.forEach(card => {
 			let arrowBtn = block.querySelector('svg');
 			let index = selectOptionBlock.indexOf(block);
 			arrowBtn.addEventListener('click', () => {
-				optionsBlock.style.transform = 'translateY(-70%)';
+				optionsBlock.style.transform = 'translate(-100%, -70%)';
+				if (wrap.classList.contains('rtl')) {
+					optionsBlock.style.transform = 'translate(0, -70%)';
+				}
 				block.style.boxShadow = 'none';
 				let mainBlockName = block.querySelector('.select__text').innerText;
 				console.log(mainBlockName);
@@ -78,7 +80,7 @@ shortCardsArr.forEach(card => {
 								optionsBlock.classList.remove('active');
 
 								// append shortcard to block
-								let shortcard = createShortCard(options[0],  options[1])
+								let shortcard = createShortCard(options[0],  options[1]);
 								/*shortCardOption1.innerText = options[0];
 								shortCardOption2.innerText = options[1];*/
 								card.append(shortcard);

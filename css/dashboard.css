@@ -15,8 +15,13 @@
   order: 2;
 }
 
-.fs__block .content__block__header.rtl {
+.fs__block .content__block__header.rtl,
+.s__block .content__block__header.rtl {
   padding: 1.2rem 1.4rem 0.5rem 2.8rem;
+}
+
+.content__block__header.rtl {
+  justify-content: flex-end;
 }
 
 .content__block__body.rtl {
@@ -654,6 +659,10 @@ polyline {
 @media screen and (max-width: 768px) {
   .content__wrap {
     width: 100%;
+    order: 2;
+  }
+
+  .s__block {
     order: 2;
   }
 

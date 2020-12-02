@@ -51,24 +51,9 @@ html {
   order: 2;
 }
 
-.main__sidebar .options__block {
-  width: 300px;
-  display: none;
-  position: absolute;
-  z-index: 6;
-  top: 0;
+.main__sidebar.rtl .options__block {
   left: calc(100% + 5px);
   transform: translateX(0%);
-  padding: 0.5rem;
-  background: #D7D7D7;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.35);
-}
-.main__sidebar .options__block.active {
-  display: block;
-}
-.main__sidebar .options__block svg {
-  width: 1.5rem;
-  height: auto;
 }
 
 /* LTR */
@@ -135,7 +120,7 @@ html {
   width: 300px;
   display: none;
   position: absolute;
-  z-index: 6;
+  z-index: 16;
   top: 0;
   left: -5px;
   transform: translateX(-100%);
@@ -293,16 +278,11 @@ html {
 }
 @media screen and (max-width: 1440px) {
   .sidebar {
-    width: 188px;
+    width: 180px;
   }
 
   .main {
-    width: calc(100% - 188px);
-  }
-}
-@media screen and (max-width: 1368px) {
-  .sidebar {
-    width: 180px;
+    width: calc(100% - 180px);
   }
 }
 @media screen and (max-width: 1200px) {
