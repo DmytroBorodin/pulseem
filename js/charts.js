@@ -1,19 +1,25 @@
-
+let wrap = document.querySelector('.wrap');
 let pieChartsBlock = document.querySelector('.charts__block');
 let pieChartTotalText = [...document.querySelectorAll('.total__val')];
 let pieChart1 = am4core.create("pie__chart__1", am4charts.PieChart);
 let series = pieChart1.series.push(new am4charts.PieSeries());
 series.dataFields.value = "value";
 series.dataFields.category = "type";
+if (wrap.classList.contains('rtl')) {
+	series.dataFields.category = "type_he";
+}
 
 pieChart1.data = [{
   "type": "Active",
+  "type_he": "פעילים",
   "value": 5
 }, {
   "type": "Error",
+  "type_he": "שגויים",
   "value": 230
 },{
   "type": "Removed",
+  "type_he": "מוסרים",
   "value": 105
 }];
 
@@ -27,13 +33,16 @@ let pieChart2 = am4core.create("pie__chart__2", am4charts.PieChart);
 // Add data
 pieChart2.data = [{
   "type": "Active",
-  "value": 100
+  "type_he": "פעילים",
+  "value": 5
 }, {
-  "type": "Active",
-  "value": 500
-}, {
-  "type": "Active",
-  "value": 247
+  "type": "Error",
+  "type_he": "שגויים",
+  "value": 230
+},{
+  "type": "Removed",
+  "type_he": "מוסרים",
+  "value": 105
 }];
 
 // Add and configure Series
@@ -86,6 +95,27 @@ xyChart1.data = [
 	},
 ]
 
+if (wrap.classList.contains('rtl')) {
+	xyChart1.data = [
+		{
+			"action": "הסרות",
+			"value": 90,
+		},
+		{
+			"action": "שגיאות",
+			"value": 48,
+		},
+		{
+			"action": "הקלקות",
+			"value": 12,
+		},
+		{
+			"action": "פתיחות",
+			"value": 39,
+		},
+	]
+}
+
 let categoryAxis = xyChart1.xAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "action";
 let valueAxis = xyChart1.yAxes.push(new am4charts.ValueAxis());
@@ -117,7 +147,6 @@ createGrid(75);
 createGrid(100);
 
 
-
 let xyChart2 = am4core.create("xy__chart__2", am4charts.XYChart);
 xyChart2.paddingBottom = -10;
 
@@ -139,6 +168,27 @@ xyChart2.data = [
 		"value": 39
 	},
 ]
+
+if (wrap.classList.contains('rtl')) {
+	xyChart2.data = [
+		{
+			"action": "פתיחות",
+			"value": 90,
+		},
+		{
+			"action": "הקלקות",
+			"value": 48,
+		},
+		{
+			"action": "שגיאות",
+			"value": 12,
+		},
+		{
+			"action": "DLR",
+			"value": 39,
+		},
+	]
+}
 
 let categoryAxis2 = xyChart2.xAxes.push(new am4charts.CategoryAxis());
 categoryAxis2.dataFields.category = "action";
@@ -198,6 +248,9 @@ let pieChartLabelsCreator = () => {
 			let chartLabel = setElement('div', 'chart__label', '');
 			let labelVal = setElement('span', 'span', `${chart.data[i].value}`);
 			let labelName = setElement('span', 'span', `${chart.data[i].type}`);
+			if (wrap.classList.contains('rtl')) {
+				labelName = setElement('span', 'span', `${chart.data[i].type_he}`);
+			}
 			chartLabel.append(labelVal);
 			chartLabel.append(labelName);
 			labelsBlock.append(chartLabel);

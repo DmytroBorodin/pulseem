@@ -21,16 +21,21 @@ blockButtonsArr.forEach(btn => {
 
 // Create shortcard
 
-let shortCardBlock = setElement('div', 'shortcard__block', '');
-let shortCard = setElement('div', 'shortcard', '');
-let shortCardOption1 = setElement('p', 'option__text', '');
-let shortCardOption2 = setElement('p', 'option__text', '');
-let editBtn = setElement('img', 'edit__btn', '');
-editBtn.setAttribute('src', 'imgs/pencil.svg');
-shortCard.append(shortCardOption1);
-shortCard.append(shortCardOption2);
-shortCard.append(editBtn);
-shortCardBlock.append(shortCard);
+let createShortCard = (option1, option2) => {
+	let shortCardBlock = setElement('div', 'shortcard__block', '');
+	let shortCard = setElement('div', 'shortcard', '');
+	let shortCardOption1 = setElement('p', 'option__text', `${option1}`);
+	let shortCardOption2 = setElement('p', 'option__text', `${option2}`);
+	let editBtn = setElement('img', 'edit__btn', '');
+	editBtn.setAttribute('src', 'imgs/pencil.svg');
+	shortCard.append(shortCardOption1);
+	shortCard.append(shortCardOption2);
+	shortCard.append(editBtn);
+	shortCardBlock.append(shortCard);
+	return shortCardBlock;
+}
+
+
 
 
 // Select options
@@ -52,9 +57,12 @@ shortCardsArr.forEach(card => {
 			let arrowBtn = block.querySelector('svg');
 			let index = selectOptionBlock.indexOf(block);
 			arrowBtn.addEventListener('click', () => {
+				optionsBlock.style.transform = 'translateY(-70%)';
 				block.style.boxShadow = 'none';
+				let mainBlockName = block.querySelector('.select__text').innerText;
+				console.log(mainBlockName);
 				let blockName = block.querySelector('.select__text');
-				optionListsArr[index].classList.toggle('active');
+				optionListsArr[index].classList.add('active');
 				let listItemsArr = [...optionListsArr[index].querySelectorAll('.option__list__item ')];
 				listItemsArr.forEach(li => {
 					li.addEventListener('click', () => {
@@ -69,10 +77,11 @@ shortCardsArr.forEach(card => {
 							setTimeout(() => {
 								optionsBlock.classList.remove('active');
 
-								// Update and append shortcard to block
-								shortCardOption1.innerText = options[0];
-								shortCardOption2.innerText = options[1];
-								card.append(shortCardBlock);
+								// append shortcard to block
+								let shortcard = createShortCard(options[0],  options[1])
+								/*shortCardOption1.innerText = options[0];
+								shortCardOption2.innerText = options[1];*/
+								card.append(shortcard);
 								selectOptionBlock[1].classList.add('disabled');
 								card.classList.add('active');
 							}, 1000)
