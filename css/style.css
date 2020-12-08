@@ -729,6 +729,12 @@ html {
     order: 2;
     margin: 0 0 0 16px;
   }
+  .wrap.rtl .user__block {
+    margin-left: 0px;
+  }
+  .wrap.rtl .faq {
+    margin-right: 10px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .main__sidebar {
