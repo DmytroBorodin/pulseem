@@ -1,4 +1,65 @@
 'use strict'
+let body = document.querySelector('body');
+let sideBar = document.querySelector('.sidebar');
+let navbar = document.querySelector('.navbar');
+let burgerBtn = sideBar.querySelector('.burger__btn');
+let navBurgerBtn = navbar.querySelector('.burger__btn');
+let closeMenuBtn = sideBar.querySelector('.close__btn');
+let main = document.querySelector('.main');
+
+burgerBtn.addEventListener('click', () => {
+	sideBar.classList.toggle('mini');
+	main.classList.toggle('max');
+});
+
+navBurgerBtn.addEventListener('click', () => {
+	sideBar.classList.add('active');
+	body.classList.add('locked');
+});
+closeMenuBtn.addEventListener('click', () => {
+	sideBar.classList.remove('active');
+	body.classList.remove('locked');
+})
+
+
+// menu and submenu lists settings
+
+let menuLinksArr = [...document.querySelectorAll('.menu__link')];
+let submenusArr = [...document.querySelectorAll('.submenu__list')];
+
+menuLinksArr.forEach(link => {
+	let linkId = link.getAttribute('linkname');
+	link.addEventListener('mouseover', () => {
+		for (let i = 0; i < submenusArr.length; i++) {
+			submenusArr[i].classList.remove('active');
+			let submenuId = submenusArr[i].getAttribute('id');
+			if (submenuId == linkId) {
+				submenusArr[i].classList.add('active');
+			}
+		}
+	})
+})
+
+//change language and page direction
+
+let selectBlock = document.querySelector('.languages');
+let lanuagesArr = [...selectBlock.querySelectorAll('.option')];
+console.log(lanuagesArr);
+
+selectBlock.addEventListener('change', (e) => {
+	let val = e.srcElement.value;
+	wrap.classList.remove('rtl');
+	e.srcElement.attributes[0].nodeValue = '';
+	console.log(e.srcElement.attributes[0].nodeValue);
+	/*e.srcElement.dir.setAttribute('dir', '');*/
+	if (val == 'true') {
+		wrap.classList.add('rtl');
+		e.srcElement.attributes[0].nodeValue = 'rtl'
+		/*e.srcElement.dir.setAttribute('dir', 'rtl');*/
+	}
+})
+	
+
 let fsBlock = document.querySelector('.fs__block');
 let bodyBlocksArr = [...fsBlock.querySelectorAll('.content__block__body')];
 let blockButtonsArr = [...fsBlock.querySelectorAll('.content__btn')];
