@@ -42,7 +42,7 @@ html {
 
 /* */
 .wrap.rtl {
-  overflow-x: hidden;
+  position: relative;
 }
 .wrap.rtl .sidebar {
   order: 2;
@@ -718,15 +718,6 @@ html {
     width: calc(100%);
   }
 
-  .wrap.rtl .sidebar {
-    display: flex;
-    justify-content: flex-end;
-    left: 100%;
-    transform: translateX(0%);
-  }
-  .wrap.rtl .sidebar.active {
-    transform: translateX(-100%);
-  }
   .wrap.rtl .sidebar__header {
     justify-content: flex-start;
   }

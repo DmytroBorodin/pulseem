@@ -19,6 +19,7 @@ navBurgerBtn.addEventListener('click', () => {
 closeMenuBtn.addEventListener('click', () => {
 	sideBar.classList.remove('active');
 	body.classList.remove('locked');
+	console.log('close');
 })
 
 
