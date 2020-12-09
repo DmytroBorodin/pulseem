@@ -732,6 +732,10 @@ button.faq span {
   color: #fff;
 }
 
+.option__text:nth-child(2) {
+  font-size: 18px;
+}
+
 @media screen and (min-width: 1915px) {
   .sidebar {
     width: 10.8%;
@@ -870,10 +874,6 @@ button.faq span {
   }
 }
 @media screen and (max-width: 768px) {
-  .sidebar {
-    border-right: 0px solid #000;
-  }
-
   .navbar {
     padding: 0 18px;
     border-bottom: 1px solid #797979;
