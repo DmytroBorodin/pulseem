@@ -7,20 +7,21 @@ series.dataFields.value = "value";
 series.dataFields.category = "type";
 if (wrap.classList.contains('rtl')) {
 	series.dataFields.category = "type_he";
+	pieChart1.legend.reverseOrder = true;
 }
 
 pieChart1.data = [{
   "type": "Active",
   "type_he": "פעילים",
-  "value": 5
+  "value": 8
 }, {
   "type": "Error",
   "type_he": "שגויים",
-  "value": 230
+  "value": 5
 },{
   "type": "Removed",
   "type_he": "מוסרים",
-  "value": 105
+  "value": 23
 }];
 
 
@@ -139,7 +140,10 @@ xySeries.columns.template.fill = am4core.color("#0371AD");
 xySeries.columns.template.width = am4core.percent(10);
 xySeries.columns.template.column.cornerRadiusTopLeft = 3;
 xySeries.columns.template.column.cornerRadiusTopRight = 3;
-
+xySeries.columns.template.tooltipText = "{value}%";
+xySeries.tooltip.getFillFromObject = false;
+xySeries.tooltip.background.fill =am4core.color("#000");;
+console.log(xySeries.tooltip);
 createGrid(0);
 createGrid(25);
 createGrid(50);

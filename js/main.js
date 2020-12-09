@@ -30,7 +30,7 @@ let submenusArr = [...document.querySelectorAll('.submenu__list')];
 
 menuLinksArr.forEach(link => {
 	let linkId = link.getAttribute('linkname');
-	link.addEventListener('mouseover', () => {
+	link.addEventListener('click', () => {
 		for (let i = 0; i < submenusArr.length; i++) {
 			submenusArr[i].classList.remove('active');
 			let submenuId = submenusArr[i].getAttribute('id');
@@ -43,16 +43,29 @@ menuLinksArr.forEach(link => {
 
 //change language and page direction
 
+console.log(window.innerWidth);
+
 let selectBlock = document.querySelector('.languages');
 let lanuagesArr = [...selectBlock.querySelectorAll('.option')];
-console.log(lanuagesArr);
+
+
+window.addEventListener('resize', () => {
+	console.log(window.innerWidth);
+	if (window.innerWidth < 576) {
+		lanuagesArr[0].label = 'En';
+		lanuagesArr[1].label = 'He';
+	}else {
+		lanuagesArr[0].label = 'English';
+		lanuagesArr[1].label = 'Hebrew';
+	}
+})
+
 
 selectBlock.addEventListener('change', (e) => {
 	let val = e.srcElement.value;
 	wrap.classList.remove('rtl');
 	e.srcElement.attributes[0].nodeValue = '';
-	console.log(e.srcElement.attributes[0].nodeValue);
-	/*e.srcElement.dir.setAttribute('dir', '');*/
+	
 	if (val == 'true') {
 		wrap.classList.add('rtl');
 		e.srcElement.attributes[0].nodeValue = 'rtl'

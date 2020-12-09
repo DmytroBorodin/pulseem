@@ -558,6 +558,13 @@ polyline {
   z-index: 10;
 }
 
+.wrap.rtl #newsletter {
+  order: 3;
+}
+.wrap.rtl #sms {
+  order: 2;
+}
+
 @media screen and (max-width: 1700px) {
   .chart {
     width: 240px;
@@ -686,11 +693,9 @@ polyline {
     height: auto;
     opacity: 1;
     overflow: auto;
+    margin-top: 0;
     padding-top: 2.2rem;
     border-top: 1px solid #D7D7D7;
-  }
-  .wrap.rtl .content__block__body.none {
-      padding-top: 1.2rem;
   }
 
   .content__btns__block {

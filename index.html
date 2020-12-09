@@ -221,14 +221,47 @@
                                 </option>
                             </select>
                         </div>
-                        <button class="faq">
-                            <span>?</span>
-                        </button>
-                        <button class="settings">
-                            <img src="imgs/navbar__imgs/settings.png" alt="" class="settings__img">
-                        </button>
+                        <div class="outline__block faq">
+                            <button class="faq">
+                                <span>?</span>
+                            </button>
+                        </div>
+                        <div class="outline__block settings" id='settings__btn'>
+                            <button class="settings">
+                                <img src="imgs/navbar__imgs/settings.png" alt="" class="settings__img">
+                            </button>
+                            <div class="dropdown__block" id='settings'>
+                                <a href="#" class="dropdown__link">
+                                    Link1
+                                </a>
+                                <a href="#" class="dropdown__link">
+                                    Link2
+                                </a>
+                                <span class="dropdown__border"></span>
+                                <a href="#" class="dropdown__link">
+                                    Link1
+                                </a>
+                                <a href="#" class="dropdown__link">
+                                    Link2
+                                </a>
+                            </div>
+                        </div>
                         <div class="user__block">
-                            <img src="imgs/navbar__imgs/user__icon.png" alt="" class="user__icon">
+                            <div class="outline__block" id='user__btn'>
+                                <img src="imgs/navbar__imgs/user__icon.png" alt="" class="user__icon">
+                                <div class="dropdown__block" id='user'>
+                                    <a href="#" class="dropdown__link">
+                                        Link1
+                                    </a>
+                                    <a href="#" class="dropdown__link">
+                                        Link2
+                                    </a>
+                                    <span class="dropdown__border"></span>
+                                    <a href="#" class="dropdown__link">
+                                        Link1
+                                    </a>
+                                </div>
+                            </div>
                             <span class="user__name">
                                 Rottem Goren
                             </span>
@@ -286,7 +319,7 @@
                                         </h2>
                                     </div>
                                         <div class="charts__block ">
-                                        <div class="slide__block">
+                                        <div class="slide__block" id='newsletter'>
                                             <div class="chart">
                                                 <h3 class="chart__title">
                                                     Newsletter
@@ -306,7 +339,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="slide__block">
+                                        <div class="slide__block" id='sms'>
                                             <div class="chart">
                                                 <h3 class="chart__title">
                                                     SMS
@@ -326,7 +359,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="slide__block">
+                                        <div class="slide__block" id='add__rec'>
                                             <div class="chart th">
                                                 <h3 class="chart__title">
                                                     Notification
@@ -543,49 +576,51 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="shortcard__add__block completed">
-                            <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
-                            <button class="add__btn">
-                                <span></span>
-                            </button>
-                            <div class="shortcard__block">
-                                <div class="shortcard">
-                                    <p class="option__text">SMS</p>
-                                    <p class="option__text">SMS</p>
-                                    <img src="imgs/pencil.svg" class='edit__btn' alt="">
+                        <div class="add__cards__block">
+                            <div class="shortcard__add__block completed">
+                                <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect x='2' y='2' width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 10' rx='20' ry='20'/></svg>
+                                <button class="add__btn">
+                                    <span></span>
+                                </button>
+                                <div class="shortcard__block">
+                                    <div class="shortcard">
+                                        <p class="option__text">SMS</p>
+                                        <p class="option__text">SMS</p>
+                                        <img src="imgs/pencil.svg" class='edit__btn' alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="shortcard__add__block completed">
-                            <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
-                            <button class="add__btn">
-                                <span></span>
-                            </button>
-                            <div class="shortcard__block">
-                                <div class="shortcard">
-                                    <p class="option__text">SMS</p>
-                                    <p class="option__text">SMS</p>
-                                    <img src="imgs/pencil.svg" class='edit__btn' alt="">
+                            <div class="shortcard__add__block completed">
+                                <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect x='2' y='2' width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 10' rx='20' ry='20'/></svg>
+                                <button class="add__btn">
+                                    <span></span>
+                                </button>
+                                <div class="shortcard__block">
+                                    <div class="shortcard">
+                                        <p class="option__text">SMS</p>
+                                        <p class="option__text">SMS</p>
+                                        <img src="imgs/pencil.svg" class='edit__btn' alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="shortcard__add__block">
-                            <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
-                            <button class="add__btn">
-                                <span></span>
-                            </button>
-                        </div>
-                        <div class="shortcard__add__block">
-                            <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
-                            <button class="add__btn">
-                                <span></span>
-                            </button>
-                        </div>
-                        <div class="shortcard__add__block">
-                            <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
-                            <button class="add__btn">
-                                <span></span>
-                            </button>
+                            <div class="shortcard__add__block">
+                                <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect x='2' y='2'  width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
+                                <button class="add__btn">
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="shortcard__add__block">
+                                <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect x='2' y='2' width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
+                                <button class="add__btn">
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="shortcard__add__block">
+                                <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect x='2' y='2' width='100%' height='100%' style='fill: none; stroke: #0371AD; stroke-width: 1; stroke-dasharray: 10 2' rx='20' ry='20'/></svg>
+                                <button class="add__btn">
+                                    <span></span>
+                                </button>
+                            </div>
                         </div>
                     </aside>
                 </div>

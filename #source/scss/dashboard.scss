@@ -492,6 +492,14 @@ polyline {
 	position: absolute;
 	z-index: 10;
 }
+.wrap.rtl {
+	#newsletter{
+		order: 3;
+	}
+	#sms {
+		order: 2;
+	}
+}
 @media screen and (max-width: 1700px){
 	.chart {
 		width: 240px;	

@@ -39,6 +39,8 @@ html {
   position: relative;
   .sidebar {
     order: 2;
+    border-right: none;
+    border-left: 2px solid #000;
   }
   .sidebar__header {
     display: flex;
@@ -73,6 +75,15 @@ html {
     height: auto;
   }
   .sidebar.mini {
+    .submenu__list, .submenu__list.active{
+        width: 100%; 
+        height: 0;
+        padding: 0 10px 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
     .menu__link {
       padding-right: 0%;
       border-right: none;
@@ -99,17 +110,25 @@ html {
       text-align: right;
     }
   }
-  .faq {
+  .outline__block.faq {
     order: 3;
     margin-left: 0;
     margin-right: 16px;
   }
-  .settings {
+  .outline__block.settings {
     order: 2;
     margin-left: 0;
-    margin-right: 11px;
+    margin-right: 8.5px;
   }
   .user__block {
+    margin-right: 8.5px;
+    margin-left: 0;
+  }
+  .user__block .outline__block {
+    order: 2;
+  }
+  .user__name {
+    margin-left: 0;
     margin-right: 9px;
   }
   .content__wrap {
@@ -194,10 +213,11 @@ html {
 
 .sidebar {
   width: 208px;
-  min-height: 100%;
+  max-height: 100vh;
   background: #0371AD;
   overflow: auto;
   transition: all 0.3s ease;
+  border-right: 2px solid #000;
 }
 .sidebar.mini {
   width: 66px;
@@ -317,7 +337,7 @@ html {
 .bottom__menu__list_2 {
   margin: 13.5px 0 22.5px;
 }
-/* Sidebar start end*/
+/* Sidebar end*/
 
 /* Burger button start*/
 
@@ -394,28 +414,91 @@ html {
   align-items: center;
   justify-content: flex-end;
 }
-.settings, .user__block {
-  margin-left: 11px;
+.user__block {
+  margin-left: 8.5px;
 }
-.faq, .settings {
+button.faq, button.settings {
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
-.faq {
+button.faq {
   background-color: #0371AD;
   color: #fff;
   text-align: center;
-  margin-left: 16px;
   span {
     font-size: 16px;
   }
+}
+.user__icon {
+  width: 30px;
 }
 .user__name {
   font-size: 20px;
   font-weight: 700;
   color: #0371AD;
   margin-left: 9px;
+}
+.outline__block {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.outline__block.faq {
+  margin-left: 13.5px;
+}
+.outline__block.settings {
+  margin-left: 8.5px;
+}
+.outline__block:hover {
+  background: #C5DEEC;
+}
+.dropdown__block {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 166px;
+  border-radius: 13px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+  transition: all 0.1s ease;
+}
+.outline__block:hover .dropdown__block {
+  padding: 12px 17px 9px;
+  height: auto;
+  overflow: visible;
+}
+#settings {
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, 100%);
+}
+#user {
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, 100%);
+}
+.dropdown__link {
+  font-size: 16px;
+  font-weight: 21px;
+  color: #7F7F7F;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.dropdown__border {
+  display: block;
+  border-bottom: 1px solid #7F7F7F;
+  height: 3px;
+  margin-bottom: 8px;
 }
 /* Navbar end */
 
@@ -443,6 +526,14 @@ html {
   align-items: center;
   text-align: center;
   border: 1px solid #D7D7D7;
+}
+.add__cards__block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 .main__sidebar__title {
   font-size: 2.5rem;
@@ -530,11 +621,17 @@ html {
   }
   svg {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
+    top: -1px;
+    left: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    height: 110%;
+    rect {
+      width: 90%;
+      height: 90%;
+    }
   }
 }
 .add__btn {
@@ -573,7 +670,7 @@ html {
 .shortcard__block {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 102%;
   top: 0;
   left: 0;
   background: #0371AD;
@@ -654,7 +751,7 @@ html {
     position: relative;
     width: 20px;
     height: 20px;
-    margin-right: 21px;
+    margin: 14px 21px 0 0;
     cursor: pointer;
     &:before, &:after {
       content: '';
@@ -689,6 +786,11 @@ html {
     width: calc(100%);
   }
   .wrap.rtl {
+    .sidebar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
     .sidebar__header {
       justify-content: flex-start;
     }
@@ -706,7 +808,7 @@ html {
         margin-left: 0px;
     }
     .faq {
-        margin-right: 10px;
+        margin-right: 0;
     }
   }
 }
@@ -727,6 +829,9 @@ html {
   }
 }
 @media screen and (max-width: 768px) {
+  .sidebar {
+    border-right: 0px solid #000;
+  }
   .navbar {
     padding: 0 18px;
     border-bottom: 1px solid #797979;
@@ -737,10 +842,15 @@ html {
   .user__name {
     display: none;
   }
-  .languages {
-    option {
-      font-size: 16px;
-    }
+  #settings {
+    left: 0%;
+    z-index: 20;
+    transform: translate(-80%, 100%);
+  }
+  #user {
+    left: 0%;
+    z-index: 20;
+    transform: translate(-80%, 100%);
   }
   .main__wrap {
     background:#fff;
@@ -774,6 +884,18 @@ html {
     width: 100%;
     padding-top: 15.8%;
   }
+  .wrap.rtl {
+    #settings {
+      left: 100%;
+      z-index: 20;
+      transform: translate(-20%, 100%);
+    }
+    #user {
+      left: 100%;
+      z-index: 20;
+      transform: translate(-20%, 100%);
+    }
+  }
 }
 @media screen and(max-width: 374px) {
   .main__sidebar {
@@ -781,22 +903,22 @@ html {
       margin: 0.8rem auto 3rem;
   }
   .navbar {
-      padding: 0 10px;
-  }
-  .settings, .user__block {
-    margin-left: 5px;
+      padding: 0 7px 0 18px;
   }
   .faq {
-    background-color: #0371AD;
     color: #fff;
     text-align: center;
-    margin-left: 10px;
     span {
       font-size: 16px;
     }
   }
+  .wrap.rtl {
+    .navbar {
+      padding: 0 18px 0 7px;
+    }
+  }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 349px) {
   .sidebar__block {
     width: 100%;
   }
