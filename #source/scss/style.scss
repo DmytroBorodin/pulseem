@@ -106,6 +106,8 @@ html {
     margin-left: 0;
   }
   .languages {
+    padding-left: 0;
+    padding-right: 3px;
     option {
       text-align: right;
     }
@@ -130,6 +132,17 @@ html {
   .user__name {
     margin-left: 0;
     margin-right: 9px;
+  }
+  .dropdown__link {
+    text-align: right;
+  }
+  .select__arrow {
+    position: absolute;
+    width: 10px;
+    right: 77px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
   }
   .content__wrap {
     order: 2;
@@ -398,16 +411,33 @@ html {
     } 
   }
 }
+.change__languages__block {
+  position: relative;
+  width: auto;
+} 
 .languages {
+  background: transparent;
+  width: 90px;
   border: none;
   outline: none;
   cursor: pointer;
   font-size: 20px;
+  line-height: 24px;
+  padding-left: 3px;
   font-family: 'Assistant';
+  -webkit-appearance: none;
   option {
     font-size: 20px;
     font-family: 'Assistant';
   }
+}
+.select__arrow {
+  position: absolute;
+  width: 10px;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 .buttons__block, .user__block {
   display: flex;
@@ -718,6 +748,11 @@ button.faq {
       width: calc(100% - 180px);
   }
 }
+@media screen and (max-width: 1368px) {
+  .sidebar {
+    max-height: 100%;
+  }
+}
 @media screen and (max-width: 1200px) {
   body.locked {
     overflow: hidden;
@@ -732,6 +767,7 @@ button.faq {
     transform: translateX(-100%);
     z-index: 12;
     transition: all 0.3s ease;
+    border: none;
     .burger__btn {
       display: none;
     }
@@ -793,6 +829,7 @@ button.faq {
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
+      border: none;
     }
     .sidebar__header {
       justify-content: flex-start;
@@ -897,6 +934,26 @@ button.faq {
     }
   }
 }
+@media screen and (max-width: 574px) {
+  .languages {
+    width: 45px;
+    padding-right: 7px;
+    padding-left: 3px;
+  }
+  .select__arrow {
+      right: 7px;
+  }
+  .wrap.rtl {
+    .languages {
+      width: 45px;
+      padding-left: 7px;
+      padding-right: 3px;
+    }
+    .select__arrow {
+      right: 28px;
+    }
+  }
+}
 @media screen and(max-width: 374px) {
   .main__sidebar {
       width:297px;
@@ -923,9 +980,26 @@ button.faq {
     width: 100%;
   }
   .logo {
-      width: 80px;
+      width: 90px;
   }
-  .languages {
-    font-size: 16px;
+  .outline__block.faq {
+      margin-left: 0px;
+  }
+  .logo__block {
+    .burger__btn {
+      margin: 0 10px 0 0;
+    }
+  }
+  .wrap.rtl {
+    .outline__block.faq {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .logo__block {
+      .burger__btn {
+        order: 2;
+        margin: 0 0 0 10px;
+      }
+    }
   }
 }

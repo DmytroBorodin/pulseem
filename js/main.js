@@ -49,8 +49,7 @@ let selectBlock = document.querySelector('.languages');
 let lanuagesArr = [...selectBlock.querySelectorAll('.option')];
 
 
-window.addEventListener('resize', () => {
-	console.log(window.innerWidth);
+let changeLanguageTitle = () => {
 	if (window.innerWidth < 576) {
 		lanuagesArr[0].label = 'En';
 		lanuagesArr[1].label = 'He';
@@ -58,7 +57,11 @@ window.addEventListener('resize', () => {
 		lanuagesArr[0].label = 'English';
 		lanuagesArr[1].label = 'Hebrew';
 	}
-})
+}
+
+changeLanguageTitle();
+
+window.addEventListener('resize', changeLanguageTitle);
 
 
 selectBlock.addEventListener('change', (e) => {
