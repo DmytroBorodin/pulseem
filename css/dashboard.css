@@ -698,6 +698,15 @@ polyline {
     border-top: 1px solid #D7D7D7;
   }
 
+  .wrap.rtl .content__block__body.none {
+    height: auto;
+    opacity: 1;
+    overflow: auto;
+    margin-top: 0;
+    padding-top: 2.2rem;
+    border-top: 1px solid #D7D7D7;
+  }
+
   .content__btns__block {
     display: none;
   }
