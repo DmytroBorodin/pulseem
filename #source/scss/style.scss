@@ -144,73 +144,8 @@ html {
     transform: translateY(-50%);
     pointer-events: none;
   }
-  .content__wrap {
-    order: 2;
-  }
-  .f__block {
-    order: 2;
-  } 
   .main__sidebar {
-    .options__block {
-      left: calc(100% + 5px);
-      transform: translateX(0%);
-    }
-  }
-  .slide__block.f {
-    order: 3;
-  }
-
-  .slide__block.s {
-    order: 2;
-  }
-
-  .content__status__block .cotent__status__title {
-    order: 2;
-  }
-
-  .content__block__header .content__title__block {
-    order: 2;
-  }
-
-  .fs__block .content__block__header,
-  .s__block .content__block__header {
-    padding: 1.2rem 1.4rem 0.5rem 2.8rem;
-  }
-
-  .content__block__header {
-    justify-content: flex-end;
-  }
-  .fs__block .content__block__header {
-    justify-content: space-between;
-  }
-  .content__block__body {
-    padding: 0 1.4rem 0 1%;
-  }
-  .content__block__body .chart {
-    order: 2;
-  }
-
-  .time__text {
-    margin-right: 1.2rem;
-  }
-
-  .main__text {
-    text-align: right;
-  }
-
-  .submain__text {
-    justify-content: flex-end;
-  }
-  .submain__text img {
-    margin-left: 1rem;
-  }
-
-  .main__text.s {
-    padding-right: 35%;
-  }
-
-  .main__list .list__item__name {
-    order: 2;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -540,7 +475,7 @@ button.faq {
 }
 
 .main__wrap {
-  height: calc(100% - 65px);
+  height: calc(100vh - 65px);
   display: flex;
   background-color: #F2F2F2;
 }
@@ -555,7 +490,7 @@ button.faq {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid #D7D7D7;
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 .add__cards__block {
   width: 100%;
@@ -731,6 +666,37 @@ button.faq {
 .option__text:nth-child(2) {
   font-size: 18px;
 }
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  html {
+    font-size: 12px;
+    font-family: 'Assistant';
+    font-weight: 400;
+    color:#000;
+  }
+  .sidebar {
+      max-height: 100%;
+  }
+  .navbar {
+      height: 100px;
+  }
+  .main__wrap {
+    height: calc(100vh - 100px);
+    display: flex;
+    background-color: #F2F2F2;
+  }
+}
+
+@media screen and (max-width: 1600px) and (min-height: 600px) {
+  .sidebar {
+      max-height: 100%;
+  }
+  .main__wrap {
+    height: calc(100% - 65px);
+  }
+  .container {
+    justify-content: flex-start;
+  }
+}
 
 @media screen and (min-width: 1915px) {
   .sidebar {
@@ -754,6 +720,9 @@ button.faq {
   }
   .sidebar {
     max-height: 100%;
+  }
+  .main__wrap {
+    height: calc(100% - 65px);
   }
 }
 @media screen and (max-width: 1200px) {
@@ -834,6 +803,14 @@ button.faq {
       justify-content: flex-end;
       align-items: flex-start;
       border: none;
+      width: 0;
+      overflow: hiden;
+      left: 100%;
+      transform: translate(0);
+      &.active {
+        transform: translate(-100%);
+        width: 100%;
+      }
     }
     .sidebar__header {
       justify-content: flex-start;

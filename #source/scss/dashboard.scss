@@ -1,5 +1,5 @@
 /* RTL */
-.slide__block.f {
+/* .slide__block.f {
 	order: 3;
 }
 .slide__block.s {
@@ -48,6 +48,76 @@
 	.list__item__name {
 		order: 2;
 	}
+} */
+.wrap.rtl {
+	  .content__wrap {
+    order: 2;
+  }
+  .f__block {
+    order: 2;
+  } 
+  .main__sidebar {
+    .options__block {
+      left: calc(100% + 5px);
+      transform: translateX(0%);
+    }
+  }
+  .slide__block.f {
+    order: 3;
+  }
+
+  .slide__block.s {
+    order: 2;
+  }
+
+  .content__status__block .cotent__status__title {
+    order: 2;
+  }
+
+  .content__block__header .content__title__block {
+    order: 2;
+  }
+
+  .fs__block .content__block__header,
+  .s__block .content__block__header {
+    padding: 1.2rem 1.4rem 0.5rem 2.8rem;
+  }
+
+  .content__block__header {
+    justify-content: flex-end;
+  }
+  .fs__block .content__block__header {
+    justify-content: space-between;
+  }
+  .content__block__body {
+    padding: 0 1.4rem 0 1%;
+  }
+  .content__block__body .chart {
+    order: 2;
+  }
+
+  .time__text {
+    margin-right: 1.2rem;
+  }
+
+  .main__text {
+    text-align: right;
+  }
+
+  .submain__text {
+    justify-content: flex-end;
+  }
+  .submain__text img {
+    margin-left: 1rem;
+  }
+
+  .main__text.s {
+    padding-right: 35%;
+  }
+
+  .main__list .list__item__name {
+    order: 2;
+  }
 }
 /* Main settings */
 
@@ -84,10 +154,13 @@
 }
 
 /* First block */
-
-.f__block {
+.content__block__wrap.f__block {
 	width: 27.46%;
 	height: 32.5rem;
+}
+.content__block.f__block {
+	width: 100%;
+	height: 100%;
 	padding: 1.56% 0 1.2%;
 }
 .f__block .content__block__title {
@@ -148,11 +221,13 @@ a.content__status__value {
 
 /* Second block */
 
-.s__block {
+.content__block__wrap.s__block {
 	width: 69.25%;
 	height: 32.5rem;
 }
 .content__block.s__block {
+	width: 100%;
+	height: 100%;
 	display: block;
 }
 .content__block__header {
@@ -286,11 +361,13 @@ a.content__status__value {
 
 /* Third block */
 
-.th__block {
+.content__block__wrap.th__block {
 	height: 35rem;
 	width: 21.12%;
 }
 .content__block.th__block {
+	width: 100%;
+	height: 100%;
 	padding: 3.75% 1% 1%;
 }
 .tip__icon {
@@ -312,10 +389,13 @@ a.content__status__value {
 }
 
 /* Fourth block */
-
-.fs__block {
+.content__block__wrap.fs__block {
 	height: 35rem;
 	width: 76.34%;
+}
+.fs__block {
+	height: 100%;
+	width: 100%;
 }
 .fs__block .content__block__header {
 	padding: 1.2rem 2.8rem 0.5rem;
@@ -500,6 +580,77 @@ polyline {
 		order: 2;
 	}
 }
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+	.sidebar {
+	    max-height: 100%;
+	}
+	.navbar {
+	    height: 100px;
+	}
+	.content__block__wrap {
+		position: relative;
+		padding-top: 30%;
+		height: auto;
+	}
+	.content__block {
+		position: absolute;
+		top: 0;
+	}
+	.content__status__block {
+	    width: 80%;
+	}
+	.s__block {
+		.chart {
+		    width: 88.2%;
+		    margin: 0 auto;
+		}
+	}
+	.charts__block {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.97% 0 0.97%;
+	    width: 100%;
+	    height: 90%;
+	}
+	.th__block {
+		justify-content: center;
+	}
+	.f__block {
+		justify-content: center;
+	}
+	.content__block__body {
+		height: 90%;
+	}
+	.content__block__body .chart {
+	    width: 30%;
+	}
+	.right__chart {
+	    position: relative;
+	    width: 55%;
+	    padding-top: 25%;
+	}
+}
+
+@media screen and (min-width: 1920px) and (min-height: 900px){
+	.content__block__wrap {
+		position: relative;
+		padding-top: 25%;
+		height: auto;
+	}
+	.content__block {
+		position: absolute;
+		top: 0;
+	}
+}
+
+@media screen and (max-width: 1600px) and (min-height: 600px) {
+  .container {
+    justify-content: flex-start;
+  }
+}
+
 @media screen and (max-width: 1700px){
 	.chart {
 		width: 240px;	
@@ -524,22 +675,23 @@ polyline {
 }
 
 @media screen and (max-width: 1440px) {
-	.s__block, .f__block, .th__block, .fs__block{
-		height: auto;
-	}
 	.row {
 		align-items: stretch;
 	}
 }
-@media screen and (max-width: 1368px) {
-	.s__block, .f__block, .th__block, .fs__block{
+@media screen and (max-width: 1368px) { 
+	.content__block__wrap.f__block, 
+	.content__block__wrap.s__block,
+	.content__block__wrap.th__block, 
+	.content__block__wrap.fs__block {
 		width: 100%;
 		margin-bottom: 3rem;
+		height: auto;
 	}
-	.fs__block {
+	.content__wrap__block.fs__block {
 		margin-bottom: 0;
 	}
-	.f__block {
+	.content__block.f__block {
 	    padding: 1.56% 0 7.74%;
 	}
 	.container {
@@ -595,6 +747,9 @@ polyline {
 	.s__block {
 		order: 2;
 	}
+	.charts__block {
+	    margin-top: 1rem;
+	}
 	.th__block {
 		display: none;
 	}
@@ -603,6 +758,9 @@ polyline {
 	}
 	.fs__block .content__block__header {
 	    padding: 1.72% 1% 1.29% 2.48%;
+	}
+	.wrap.rtl .fs__block .content__block__header {
+	    justify-content: flex-end;
 	}
 	.content__block__body {
 		padding: 0% 2.48% 0% 2.48%;
