@@ -527,15 +527,15 @@ button.faq span {
   align-items: center;
   text-align: center;
   box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35);
+  overflow: auto;
 }
 
 .add__cards__block {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
 }
 
 .main__sidebar__title {
@@ -637,11 +637,11 @@ button.faq span {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110%;
+  width: 105%;
   height: 110%;
 }
 .shortcard__add__block svg rect {
-  width: 90%;
+  width: 93%;
   height: 90%;
 }
 
