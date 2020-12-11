@@ -522,6 +522,10 @@ a.content__status__value {
 	position: absolute;
 	top: 0;
 	left: 0;
+	font-size: 1.7rem;
+	tspan {
+		text-align: center;
+	}
 }
 g[aria-labelledby=id-61-title] {
 	display: none;

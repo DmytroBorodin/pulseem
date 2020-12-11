@@ -122,8 +122,6 @@ let categoryAxis = xyChart1.xAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "action";
 let valueAxis = xyChart1.yAxes.push(new am4charts.ValueAxis());
 let xySeries = xyChart1.series.push(new am4charts.ColumnSeries());
-categoryAxis.renderer.labels.template.fontSize = 18;
-valueAxis.renderer.labels.template.fontSize = 16;
 categoryAxis.renderer.grid.template.strokeWidth = 0;
 categoryAxis.renderer.minGridDistance = 50;
 
@@ -201,8 +199,6 @@ let categoryAxis2 = xyChart2.xAxes.push(new am4charts.CategoryAxis());
 categoryAxis2.dataFields.category = "action";
 let valueAxis2 = xyChart2.yAxes.push(new am4charts.ValueAxis());
 let xySeries2 = xyChart2.series.push(new am4charts.ColumnSeries());
-categoryAxis2.renderer.labels.template.fontSize = 18;
-valueAxis2.renderer.labels.template.fontSize = 16;
 categoryAxis2.renderer.grid.template.strokeWidth = 0;
 categoryAxis2.renderer.minGridDistance = 50;
 

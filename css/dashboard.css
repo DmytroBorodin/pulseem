@@ -570,6 +570,10 @@ a.content__status__value {
   position: absolute;
   top: 0;
   left: 0;
+  font-size: 1.7rem;
+}
+#xy__chart__1 tspan, #xy__chart__2 tspan {
+  text-align: center;
 }
 
 g[aria-labelledby=id-61-title] {
