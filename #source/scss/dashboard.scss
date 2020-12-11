@@ -27,6 +27,9 @@
 			margin-left: 1rem;
 		}
 	}
+	.content__block__header {
+	    padding: 1.2rem 2.8rem 0.5rem 1.4rem;
+	}
 	.content__block__body {
 		.chart {
 			display: flex;
@@ -223,7 +226,7 @@ a.content__status__value {
 }
 .content__block__header {
 	width: 100%;
-	padding: 1.72% 1% 1.29% 2.48%;
+	padding: 1.2rem 1.4rem 0.5rem 2.8rem;
 	border-bottom: 1px solid #D7D7D7;
 }
 .s__block .content__block__title, 
@@ -387,9 +390,6 @@ a.content__status__value {
 .fs__block {
 	height: 100%;
 	width: 100%;
-}
-.fs__block .content__block__header {
-	padding: 1.2rem 2.8rem 0.5rem;
 }
 .content__block__body {
 	width: 100%;
@@ -581,7 +581,7 @@ polyline {
 	}
 	.content__block__wrap {
 		position: relative;
-		padding-top: 30%;
+		padding-top: 38%;
 		height: auto;
 	}
 	.content__block {
@@ -611,16 +611,50 @@ polyline {
 	.f__block {
 		justify-content: center;
 	}
+	.content__block__header {
+	    padding: 2rem 1rem 2rem 2.8rem;
+	}
+	.wrap.rtl {
+		.content__block__header {
+	    	padding: 2rem 2.8rem 2rem 1rem;
+		}
+	}
 	.content__block__body {
 		height: 90%;
 	}
 	.content__block__body .chart {
 	    width: 30%;
 	}
+	.content__block__body.s {
+	    align-items: center;
+	}
 	.right__chart {
 	    position: relative;
 	    width: 55%;
 	    padding-top: 25%;
+	}
+	.content__block__body {
+		.chart {
+			height: 85%;
+		}
+	}
+	.wrap.rtl {
+		.main__text.s {
+		    padding-right:0;
+		    text-align: center;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) and (min-height: 900px) and (max-height: 1080px) {
+	.content__block {
+		position: absolute;
+		top: 0;
+	}
+	.content__block__wrap {
+		position: relative;
+		padding-top: 22%;
+		height: auto;
 	}
 }
 
@@ -707,6 +741,9 @@ polyline {
   .content__wrap {
     width: calc(100% - 250px);
   }
+  .charts__block {
+  		direction: ltr;
+  }
   .wrap.rtl {
   	  .charts__block {
   		  direction: rtl;
@@ -740,8 +777,8 @@ polyline {
 	.options__block {
 		display: none;
 	}
-	.fs__block .content__block__header {
-	    padding: 1.72% 1% 1.29% 2.48%;
+	.content__block__header {
+	    padding: 1.72% 1.2% 1.29% 2.48%;
 	}
 	.content__block__body {
 		padding: 0% 2.48% 0% 2.48%;
@@ -781,6 +818,9 @@ polyline {
 	}
 	.main__text.s {
 	    display: none;
+	}
+	.content__block__header {
+	    padding: 1.72% 2.48% 1.29% 1.2%;
 	}
 	.content__block__body .chart__title {
 		display: block;

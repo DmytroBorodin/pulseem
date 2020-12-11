@@ -67,6 +67,7 @@ window.addEventListener('resize', changeLanguageTitle);
 
 
 selectBlock.addEventListener('change', (e) => {
+	console.log(e);
 	let val = e.srcElement.value;
 	wrap.classList.remove('rtl');
 	html.removeAttribute('dir');

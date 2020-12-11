@@ -670,21 +670,22 @@
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        rtl: true,
+                        rtl: false,
                       }
                     },
                 ]
             });
 
-            /*$('.languages').change(function(){
-                $('.wrap');
-                if($('.wrap').hasClass('rtl')) {
-                    slider.slick("slickSetOption", "rtl", true);
-                } else {
-                    slider.slick("slickSetOption", "rtl", false);
-                    slider.slick('refresh');
+            $('.languages').change(function(e){
+                var langVal = $(this).children("option:selected").val();
+                if(langVal == 'true') {
+                    console.log(langVal)
+                    slider.slick("slickSetOption", "rtl", true, false);
+                    slider.slick('slickGoTo', 0);
+                } else if(langVal == 'false'){
+                    slider.slick("slickSetOption", "rtl", false, true);
                 }
-            })*/
+            })
 
         </script> 
         <script src='js/charts.js'></script>

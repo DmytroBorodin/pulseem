@@ -81,33 +81,33 @@ html {
   }
   .select__arrow {
     position: absolute;
-    width: 10px;
-    right: 77px;
+    width: 1rem;
+    right: 7.7rem;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
   }
   .outline__block.faq {
     margin-left: 0;
-    margin-right: 16px;
+    margin-right: 1.6rem;
   }
   .outline__block.settings {
     margin-left: 0;
-    margin-right: 8.5px;
+    margin-right: 0.85rem;
   }
   .user__block {
-    margin-right: 8.5px;
+    margin-right: 0.85rem;
     margin-left: 0;
   }
   .user__name {
     margin-left: 0;
-    margin-right: 9px;
+    margin-right: 0.9rem;
   }
   .main__sidebar {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
   }
   .options__block {
-    left: 5px;
+    left: calc(100% + 0.05rem);
     transform: translateX(0%);
     &.active {
       display: block;
@@ -243,7 +243,7 @@ html {
 /* Sidebar start */
 
 .sidebar {
-  width: 208px;
+  width: 20.8rem;
   max-height: 100vh;
   background: #0371AD;
   overflow: auto;
@@ -252,22 +252,22 @@ html {
   overflow: hidden;
 }
 .sidebar.mini {
-  width: 66px;
+  width: 6.6rem;
 }
 .sidebar__block {
   height: 100%;
 }
 .sidebar__body {
-  height: calc(100% - 65px);
+  height: calc(100% - 6.5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .menu__list {
-  margin-top: 19px;
+  margin-top: 1.9rem;
 }
 .menu__item {
-  padding: 10.5px 0 10.5px;
+  padding: 1.05rem 0 1.05rem;
   transition: all 0.3s ease;
   &:last-child {
     margin-bottom: 0;
@@ -276,11 +276,11 @@ html {
 .menu__link {
   display: flex;
   align-items: center;
-  height: 36px;
+  height: 3.6rem;
   padding-left:7.2%;
   border-left: 5px solid transparent;
   img {
-    width: 30px;
+    width: 3.0rem;
   }
 }
 .menu__link:hover {
@@ -291,7 +291,7 @@ html {
 }
 .link__title {
   margin-left: 9.04%;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #fff;
   transition: all 0.3s ease;
 }
@@ -343,18 +343,18 @@ html {
 }
 .submenu__list.active {
   transform: scaleY(1);
-  padding: 10px 10px 10px 10%;
+  padding: 1.0rem 1.0rem 1.0rem 10%;
   height: auto;
 }
 .submenu__item {
-  margin-bottom: 20px;
+  margin-bottom: 2.0rem;
   &:last-child {
     margin-bottom: 0;
   }
 }
 .submenu__link {
   color: rgb(85, 85, 85);
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 .submenu__link:hover {
   font-weight: 700;
@@ -367,7 +367,7 @@ html {
   border-bottom: 1px solid #D7D7D7;
 }
 .bottom__menu__list_2 {
-  margin: 13.5px 0 22.5px;
+  margin: 1.35rem 0 2.25rem;
 }
 /* Sidebar end*/
 
@@ -375,14 +375,14 @@ html {
 
 .sidebar__header {
   width: 100%;
-  height: 65px;
+  height: 6.5rem;
   display: flex;
   align-items: center;
 }
 .burger__btn {
-  width: 34px;
-  height: 18px;
-  margin: 0 16px 0;
+  width: 3.4rem;
+  height: 1.8rem;
+  margin: 0 1.6rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -394,7 +394,7 @@ html {
   }
   &:before, &:after, .burger__span {
     width: 100%;
-    height: 4px;
+    height: 0.4rem;
     border-radius: 2px;
     background-color: #fff;
   } 
@@ -409,19 +409,22 @@ html {
 
 .navbar {
   width: 100%;
-  height: 65px;
+  height: 6.5rem;
   display: flex; 
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 4.0rem;
   background: #fff;
+}
+.logo {
+  width: 18rem;
 }
 .logo__block {
   display: flex;
   align-items: center;
   .burger__btn {
-    width: 23px;
-    height: 12px;
+    width: 2.3rem;
+    height: 1.2rem;
     display: none;
     &:before, &:after, .burger__span {
       height: 2px;
@@ -436,24 +439,24 @@ html {
 } 
 .languages {
   background: transparent;
-  width: 90px;
+  width: 9.0rem;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 20px;
-  line-height: 24px;
-  padding-left: 3px;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  padding-left: 0.3rem;
   font-family: 'Assistant';
   -webkit-appearance: none;
   option {
-    font-size: 20px;
+    font-size: 2.0rem;
     font-family: 'Assistant';
   }
 }
 .select__arrow {
   position: absolute;
-  width: 10px;
-  right: 3px;
+  width: 1.0rem;
+  right: 0.3rem;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -464,11 +467,11 @@ html {
   justify-content: flex-end;
 }
 .user__block {
-  margin-left: 8.5px;
+  margin-left: 0.85rem;
 }
 button.faq, button.settings {
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
 }
 button.faq {
@@ -476,22 +479,22 @@ button.faq {
   color: #fff;
   text-align: center;
   span {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 .user__icon {
-  width: 30px;
+  width: 3.0rem;
 }
 .user__name {
-  font-size: 20px;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #0371AD;
-  margin-left: 9px;
+  margin-left: 0.9rem;
 }
 .outline__block {
   position: relative;
-  width: 35px;
-  height: 35px;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -499,10 +502,10 @@ button.faq {
   transition: all 0.3s ease;
 }
 .outline__block.faq {
-  margin-left: 13.5px;
+  margin-left: 1.35rem;
 }
 .outline__block.settings {
-  margin-left: 8.5px;
+  margin-left: 0.85rem;
 }
 .outline__block:hover {
   background: #C5DEEC;
@@ -513,14 +516,14 @@ button.faq {
   height: 0;
   overflow: hidden;
   padding: 0;
-  width: 166px;
-  border-radius: 13px;
+  width: 16.6rem;
+  border-radius: 1.3rem;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
   transition: all 0.1s ease;
 }
 .outline__block:hover .dropdown__block {
-  padding: 12px 17px 9px;
+  padding: 1.2rem 1.7rem 0.9rem;
   height: auto;
   overflow: visible;
 }
@@ -535,10 +538,10 @@ button.faq {
   transform: translate(-50%, 100%);
 }
 .dropdown__link {
-  font-size: 16px;
-  font-weight: 21px;
+  font-size: 1.6rem;
+  font-weight: 2.1rem;
   color: #7F7F7F;
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
   &:last-child {
     margin-bottom: 0;
   }
@@ -546,32 +549,32 @@ button.faq {
 .dropdown__border {
   display: block;
   border-bottom: 1px solid #7F7F7F;
-  height: 3px;
-  margin-bottom: 8px;
+  height: 0.3rem;
+  margin-bottom: 0.8rem;
 }
 /* Navbar end */
 
 .main {
-  width: calc(100% - 208px);
+  width: calc(100% - 20.8rem);
 }
 .main.max {
-  width: calc(100% - 64px);
+  width: calc(100% - 6.4rem);
 }
 
 .main__wrap {
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 6.5rem);
   display: flex;
   background-color: #F2F2F2;
 }
 .content__wrap {
-  width: calc(100% - 300px);
+  width: calc(100% - 30rem);
 }
 .main__sidebar {
   position: relative;
   background: #fff;
-  min-height: calc(100% - 65px);
-  width: 300px;
-  padding-bottom: 10px;
+  min-height: calc(100% - 6.5rem);
+  width: 30rem;
+  padding-bottom: 1.0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -601,7 +604,7 @@ button.faq {
   margin-bottom: 20%;
 }
 .options__block {
-  width: 300px;
+  width: 30rem;
   display: none;
   position: absolute;
   z-index: 16;
@@ -691,7 +694,7 @@ button.faq {
   transform: translate(-50%, -50%);
   width: 30px;
   height: 30px;
-  font-size: 35px;
+  font-size: 3.5rem;
   border-radius: 50%;
   border: 1px solid #0371AD;
   span {
@@ -705,7 +708,7 @@ button.faq {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 18px;
+      width: 1.8rem;
       height: 1px;
       background: #0371AD;
     }
@@ -720,7 +723,7 @@ button.faq {
 .shortcard__block {
   position: absolute;
   width: 100%;
-  height: 102%;
+  height: 104%;
   top: 0;
   left: 0;
   background: #0371AD;
@@ -753,7 +756,7 @@ button.faq {
 }
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Assistant';
     font-weight: 400;
     color:#000;
@@ -776,7 +779,7 @@ button.faq {
       max-height: 100%;
   }
   .main__wrap {
-    min-height: calc(100% - 65px);
+    min-height: calc(100% - 6.5rem);
   }
   .container {
     justify-content: flex-start;
@@ -784,9 +787,6 @@ button.faq {
 }
 
 @media screen and (min-width: 1915px) {
-  .sidebar {
-    width: 10.8%;
-  }
   .main {
     width: 89.2%;
   }
@@ -826,6 +826,7 @@ button.faq {
     z-index: 12;
     transition: all 0.3s ease;
     border: none;
+    overflow: auto;
     .burger__btn {
       display: none;
     }
@@ -894,9 +895,6 @@ button.faq {
         transform: translate(-100%);
         width: 100%;
       }
-    }
-    .sidebar__header {
-      justify-content: flex-start;
     }
     .close__btn {
       margin-left: 21px;
@@ -1060,7 +1058,6 @@ button.faq {
     }
     .logo__block {
       .burger__btn {
-        order: 2;
         margin: 0 0 0 10px;
       }
     }
