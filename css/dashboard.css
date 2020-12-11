@@ -1,61 +1,111 @@
 /* RTL */
-.wrap.rtl .content__wrap {
-  order: 2;
-}
-.wrap.rtl .f__block {
-  order: 2;
-}
-.wrap.rtl .main__sidebar .options__block {
-  left: calc(100% + 5px);
-  transform: translateX(0%);
-}
-.wrap.rtl .slide__block.f {
-  order: 3;
-}
-.wrap.rtl .slide__block.s {
-  order: 2;
-}
-.wrap.rtl .content__status__block .cotent__status__title {
-  order: 2;
-}
-.wrap.rtl .content__block__header .content__title__block {
-  order: 2;
-}
-.wrap.rtl .fs__block .content__block__header,
-.wrap.rtl .s__block .content__block__header {
-  padding: 1.2rem 1.4rem 0.5rem 2.8rem;
-}
-.wrap.rtl .content__block__header {
-  justify-content: flex-end;
-}
-.wrap.rtl .fs__block .content__block__header {
-  justify-content: space-between;
-}
-.wrap.rtl .content__block__body {
-  padding: 0 1.4rem 0 1%;
-}
-.wrap.rtl .content__block__body .chart {
+.wrap.rtl .th__block {
   order: 2;
 }
 .wrap.rtl .time__text {
-  margin-right: 1.2rem;
+  margin-left: 0;
+  margin-right: 1.3rem;
+}
+.wrap.rtl .main__text__block {
+  margin-left: 0;
+  margin-right: 2.8rem;
 }
 .wrap.rtl .main__text {
   text-align: right;
 }
-.wrap.rtl .submain__text {
-  justify-content: flex-end;
-}
-.wrap.rtl .submain__text img {
-  margin-left: 1rem;
-}
 .wrap.rtl .main__text.s {
   padding-right: 35%;
 }
-.wrap.rtl .main__list .list__item__name {
-  order: 2;
+.wrap.rtl .submain__text {
+  display: none;
+}
+.wrap.rtl .submain__text.rtl {
+  display: flex;
+}
+.wrap.rtl .submain__text.rtl img {
+  margin-left: 1rem;
+}
+.wrap.rtl .content__block__body .chart {
+  display: flex;
+  flex-direction: column;
+}
+.wrap.rtl .content__block__body .pie__chart {
+  align-self: flex-end;
+}
+.wrap.rtl .content__block__body .pie__chart tspan {
+  display: none;
 }
 
+/* wrap.rtl {
+	  .content__wrap {
+    order: 2;
+  }
+  .f__block {
+    order: 2;
+  } 
+  .main__sidebar {
+    .options__block {
+      left: calc(100% + 5px);
+      transform: translateX(0%);
+    }
+  }
+  .slide__block.f {
+    order: 3;
+  }
+
+  .slide__block.s {
+    order: 2;
+  }
+
+  .content__status__block .cotent__status__title {
+    order: 2;
+  }
+
+  .content__block__header .content__title__block {
+    order: 2;
+  }
+
+  .fs__block .content__block__header,
+  .s__block .content__block__header {
+    padding: 1.2rem 1.4rem 0.5rem 2.8rem;
+  }
+
+  .content__block__header {
+    justify-content: flex-end;
+  }
+  .fs__block .content__block__header {
+    justify-content: space-between;
+  }
+  .content__block__body {
+    padding: 0 1.4rem 0 1%;
+  }
+  .content__block__body .chart {
+    order: 2;
+  }
+
+  .time__text {
+    margin-right: 1.2rem;
+  }
+
+  .main__text {
+    text-align: right;
+  }
+
+  .submain__text {
+    justify-content: flex-end;
+  }
+  .submain__text img {
+    margin-left: 1rem;
+  }
+
+  .main__text.s {
+    padding-right: 35%;
+  }
+
+  .main__list .list__item__name {
+    order: 2;
+  }
+} */
 /* Main settings */
 .content__wrap {
   width: 100%;
@@ -487,6 +537,10 @@ a.content__status__value {
   margin-left: 1rem;
 }
 
+.submain__text.rtl {
+  display: none;
+}
+
 .main__list {
   display: none;
 }
@@ -539,6 +593,10 @@ g[aria-labelledby=id-398-title] {
   display: none;
 }
 
+.s__block tspan {
+  display: none;
+}
+
 polyline {
   display: none;
 }
@@ -571,13 +629,6 @@ polyline {
   width: 25px;
   position: absolute;
   z-index: 10;
-}
-
-.wrap.rtl #newsletter {
-  order: 3;
-}
-.wrap.rtl #sms {
-  order: 2;
 }
 
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
@@ -638,18 +689,6 @@ polyline {
     position: relative;
     width: 55%;
     padding-top: 25%;
-  }
-}
-@media screen and (min-width: 1920px) and (min-height: 900px) {
-  .content__block__wrap {
-    position: relative;
-    padding-top: 25%;
-    height: auto;
-  }
-
-  .content__block {
-    position: absolute;
-    top: 0;
   }
 }
 @media screen and (max-width: 1600px) and (min-height: 600px) {
@@ -744,6 +783,10 @@ polyline {
   .content__wrap {
     width: calc(100% - 250px);
   }
+
+  .wrap.rtl .charts__block {
+    direction: rtl;
+  }
 }
 @media screen and (max-width: 993px) {
   .content__wrap {
@@ -779,10 +822,6 @@ polyline {
 
   .fs__block .content__block__header {
     padding: 1.72% 1% 1.29% 2.48%;
-  }
-
-  .wrap.rtl .fs__block .content__block__header {
-    justify-content: flex-end;
   }
 
   .content__block__body {

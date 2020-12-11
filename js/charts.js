@@ -75,6 +75,7 @@ pieChart3.radius = am4core.percent(100);
 
 
 let xyChart1 = am4core.create("xy__chart__1", am4charts.XYChart);
+xyChart1.rtl = true;
 xyChart1.paddingBottom = -10;
 
 xyChart1.data = [
@@ -153,6 +154,7 @@ createGrid(100);
 
 
 let xyChart2 = am4core.create("xy__chart__2", am4charts.XYChart);
+xyChart2.rtl = true;
 xyChart2.paddingBottom = -10;
 
 xyChart2.data = [

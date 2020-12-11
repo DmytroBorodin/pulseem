@@ -38,13 +38,96 @@ html {
 .wrap.rtl {
   position: relative;
   .sidebar {
+    border-right: none;
+    border-left: 2px solid #000;
+    transform-origin: top left;
+  }
+  .menu__link {
+    border-left: 0px solid transparent;
+    padding-right: 7.2%;
+    border-right: 5px solid transparent;
+    &:hover {
+      border-right: 5px solid #fff;
+    }
+    &.active {
+      border-right: 5px solid #fff;
+    }
+    .link__title {
+      margin-left: 0;
+      margin-right: 9.04%;
+    }
+  }
+  .sidebar.mini {
+    .menu__link {
+      padding-right: 0%;
+      border-right: none;
+    }
+    .menu__link:hover {
+      border-right: none;
+    }
+    .menu__link.active {
+      border-right: none;
+    }
+    .link__title {
+      margin-right: 0%;
+    }
+  }
+  .languages {
+    padding-left: 0;
+    padding-right: 3px;
+    option {
+      text-align: right;
+    }
+  }
+  .select__arrow {
+    position: absolute;
+    width: 10px;
+    right: 77px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  .outline__block.faq {
+    margin-left: 0;
+    margin-right: 16px;
+  }
+  .outline__block.settings {
+    margin-left: 0;
+    margin-right: 8.5px;
+  }
+  .user__block {
+    margin-right: 8.5px;
+    margin-left: 0;
+  }
+  .user__name {
+    margin-left: 0;
+    margin-right: 9px;
+  }
+  .main__sidebar {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
+  }
+  .options__block {
+    left: 5px;
+    transform: translateX(0%);
+    &.active {
+      display: block;
+    }
+    svg {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
+  .option__list__item {
+    text-align: right;
+  }
+}
+/* .wrap.rtl {
+  position: relative;
+  .sidebar {
     order: 2;
     border-right: none;
     border-left: 2px solid #000;
-  }
-  .sidebar__header {
-    display: flex;
-    justify-content: flex-end;
+    transform-origin: top left;
   }
   .menu__link {
     justify-content: flex-end;
@@ -147,7 +230,7 @@ html {
   .main__sidebar {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
   }
-}
+} */
 
 /* LTR */
 .wrap {
@@ -166,6 +249,7 @@ html {
   overflow: auto;
   transition: all 0.3s ease;
   border-right: 2px solid #000;
+  overflow: hidden;
 }
 .sidebar.mini {
   width: 66px;
@@ -263,7 +347,7 @@ html {
   height: auto;
 }
 .submenu__item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   &:last-child {
     margin-bottom: 0;
   }
@@ -475,7 +559,7 @@ button.faq {
 }
 
 .main__wrap {
-  height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px);
   display: flex;
   background-color: #F2F2F2;
 }
@@ -485,13 +569,14 @@ button.faq {
 .main__sidebar {
   position: relative;
   background: #fff;
+  min-height: calc(100% - 65px);
   width: 300px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35);
-  overflow: auto;
 }
 .add__cards__block {
   width: 100%;
@@ -680,7 +765,7 @@ button.faq {
       height: 100px;
   }
   .main__wrap {
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     display: flex;
     background-color: #F2F2F2;
   }
@@ -691,7 +776,7 @@ button.faq {
       max-height: 100%;
   }
   .main__wrap {
-    height: calc(100% - 65px);
+    min-height: calc(100% - 65px);
   }
   .container {
     justify-content: flex-start;
@@ -800,11 +885,9 @@ button.faq {
   .wrap.rtl {
     .sidebar {
       display: flex;
-      justify-content: flex-end;
       align-items: flex-start;
       border: none;
       width: 0;
-      overflow: hiden;
       left: 100%;
       transform: translate(0);
       &.active {
@@ -821,7 +904,6 @@ button.faq {
     }
     .logo__block {
       .burger__btn {
-        order: 2;
         margin: 0 0 0 16px;
       }
     }
@@ -880,11 +962,11 @@ button.faq {
   .main__sidebar {
     width: 94.9%;
     margin: 2.69% 2.55% 0%;
+    padding: 5% 0 0 0;
     border-radius: 10px;
     border: none;
-  }
-  .main__sidebar {
-    padding: 5% 0 0 0;
+    min-height:auto;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
   }
   .main__sidebar__title, .main__sidebar__text, .options__block {
     display: none;

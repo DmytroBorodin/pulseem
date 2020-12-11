@@ -1,4 +1,6 @@
 'use strict'
+
+let html = document.querySelector('html');
 let body = document.querySelector('body');
 let sideBar = document.querySelector('.sidebar');
 let navbar = document.querySelector('.navbar');
@@ -67,12 +69,13 @@ window.addEventListener('resize', changeLanguageTitle);
 selectBlock.addEventListener('change', (e) => {
 	let val = e.srcElement.value;
 	wrap.classList.remove('rtl');
+	html.removeAttribute('dir');
 	e.srcElement.attributes[0].nodeValue = '';
 	
 	if (val == 'true') {
 		wrap.classList.add('rtl');
 		e.srcElement.attributes[0].nodeValue = 'rtl'
-		/*e.srcElement.dir.setAttribute('dir', 'rtl');*/
+		html.setAttribute('dir', 'rtl');
 	}
 })
 	

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir=''>
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
@@ -427,10 +427,17 @@
                                                     </p>
                                                     <p class="submain__text">
                                                         <img src="imgs/users.png" alt="" class="users">
-                                                        1,125
+                                                        <span>1,125</span>
                                                         <span>
                                                             12/9/20
                                                         </span>
+                                                    </p>
+                                                    <p class="submain__text rtl">
+                                                        <span>
+                                                            12/9/20
+                                                        </span>
+                                                        <img src="imgs/users.png" alt="" class="users">
+                                                        <span>1,125</span>
                                                     </p>
                                                     <ul class="main__list">
                                                         <li>
@@ -482,6 +489,13 @@
                                                         <span>
                                                             12/9/20
                                                         </span>
+                                                    </p>
+                                                    <p class="submain__text rtl">
+                                                        <span>
+                                                            12/9/20
+                                                        </span>
+                                                        <img src="imgs/users.png" alt="" class="users">
+                                                        <span>1,125</span>
                                                     </p>
                                                     <ul class="main__list">
                                                         <li>
@@ -639,9 +653,11 @@
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
-        <script src='js/slick.min.js'></script>
+  <script src='js/slick.min.js'></script> 
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script> 
         <script>
-            $('.charts__block').slick({
+            var slider = $('.charts__block').slick({
               infinite: false,
               slidesToShow: 3,
               slidesToScroll: 1,
@@ -654,13 +670,23 @@
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
+                        rtl: true,
                       }
                     },
                 ]
             });
-        </script>   
-        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+
+            /*$('.languages').change(function(){
+                $('.wrap');
+                if($('.wrap').hasClass('rtl')) {
+                    slider.slick("slickSetOption", "rtl", true);
+                } else {
+                    slider.slick("slickSetOption", "rtl", false);
+                    slider.slick('refresh');
+                }
+            })*/
+
+        </script> 
         <script src='js/charts.js'></script>
         <script src="js/main.js"></script>
     </body>
