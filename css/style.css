@@ -496,6 +496,10 @@ button.faq, button.settings {
   border-radius: 50%;
 }
 
+button.settings img {
+  width: 100%;
+}
+
 button.faq {
   background-color: #0371AD;
   color: #fff;
