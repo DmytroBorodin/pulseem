@@ -238,6 +238,7 @@ html {
   display: flex;
   width: 100%;
   min-height: 100vh;
+  background-color: #F2F2F2;
 }
 
 /* Sidebar start */
@@ -561,6 +562,7 @@ button.faq {
 
 .main {
   width: calc(100% - 20.8rem);
+  transition: all 0.3s ease;
 }
 .main.max {
   width: calc(100% - 6.4rem);
@@ -779,7 +781,7 @@ button.faq {
   }
 }
 
-@media screen and (max-width: 1600px) and (min-height: 600px) {
+@media screen and (max-width: 1920px) and (max-height: 900px) {
   .sidebar {
       max-height: 100%;
   }
@@ -813,6 +815,21 @@ button.faq {
   }
   .main__wrap {
     height: calc(100% - 65px);
+    align-items: flex-start;
+  }
+  .main__sidebar {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 4rem;
+    border-bottom-left-radius: 10px;
+  }
+  .wrap.rtl {
+    .main__sidebar {
+      border-bottom-right-radius: 10px;
+    }
+  }
+  .content__block__body  {
+    align-items: flex-start;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -823,21 +840,21 @@ button.faq {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width:0%;
     height: 100%;
     max-height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    transform: translateX(-100%);
     z-index: 12;
     transition: all 0.3s ease;
     border: none;
-    overflow: auto;
+    overflow: hidden;
     .burger__btn {
       display: none;
     }
   }
   .sidebar.active {
-    transform: translateX(0%);
+    width: 100%;
+    overflow: auto;
   }
   .sidebar__block {
     width: 350px;
