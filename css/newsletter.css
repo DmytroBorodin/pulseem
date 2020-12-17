@@ -27,9 +27,11 @@
 .wrap.rtl .search__btn {
   padding: 0.6rem 2.1rem 0.4rem 0.9rem;
 }
-.wrap.rtl .group__info, .wrap.rtl .group__name {
-  margin-left: 0;
-  margin-right: 0;
+.wrap.rtl p.group__name, .wrap.rtl p.group__info {
+  padding-left: 0;
+}
+.wrap.rtl p.group__name {
+  padding-right: 0;
 }
 
 @media screen and (max-width: 850px) {
@@ -180,8 +182,12 @@
   width: 100%;
 }
 
-.group__name, .group__info {
-  margin-left: 0;
+p.group__name, p.group__info {
+  padding-right: 0;
+}
+
+p.group__name {
+  padding-left: 0;
 }
 
 .value__block {

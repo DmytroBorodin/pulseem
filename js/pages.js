@@ -115,5 +115,4 @@ let showFullTitle = () => {
 
 showFullTitle();
 
-window.addEventListener('resize', showFullTitle)
 
