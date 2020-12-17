@@ -679,7 +679,6 @@
             $('.languages').change(function(e){
                 var langVal = $(this).children("option:selected").val();
                 if(langVal == 'true') {
-                    console.log(langVal)
                     slider.slick("slickSetOption", "rtl", true, false);
                     slider.slick('slickGoTo', 0);
                 } else if(langVal == 'false'){
