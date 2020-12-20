@@ -95,24 +95,37 @@ selectBlock.addEventListener('change', (e) => {
 
 let groupNameBlocksArr = [...document.querySelectorAll('.table__col.group__name, .title__block')];
 
+groupNameBlocksArr.forEach(block => {
+	let infoBlock = block.querySelector('.group__info__block');
+	let title = block.querySelector('.group__name').innerText;
+	let fullTitle = setElement('p', 'full__group__name', title);
+	infoBlock.appendChild(fullTitle);
+})
+
 let showFullTitle = () => {
 	groupNameBlocksArr.forEach(block => {
 		let groupInfoBlock = block.querySelector('.group__info__block');
 		let groupNameBlock = groupInfoBlock.querySelector('.group__name');
 		let groupInfoBlockWidth = groupInfoBlock.offsetWidth;
 		let groupNameBlockWidth = groupNameBlock.scrollWidth;
-		
 		if (groupInfoBlockWidth < groupNameBlockWidth) {
 			groupNameBlock.style.whiteSpace = 'nowrap';
 			groupNameBlock.style.textOverflow = 'ellipsis';
 			groupNameBlock.style.overflow = 'hidden';
-			let title = groupNameBlock.innerText;
-			let fullTitle = setElement('p', 'full__group__name', title);
-			groupNameBlock.appendChild(fullTitle);
+			block.addEventListener('mouseover', () => {
+				let fullTitleBlock = block.querySelector('.full__group__name');
+				fullTitleBlock.classList.add('active');
+			});
+			block.addEventListener('mouseleave', () => {
+				let fullTitleBlock = block.querySelector('.full__group__name');
+				fullTitleBlock.classList.remove('active');
+			})
 		}
 	})
 }
 
 showFullTitle();
+
+window.addEventListener('resize', showFullTitle)
 
 

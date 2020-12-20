@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>MMS Management</title>
+		<title>ניהול נוטיפיקציות</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/pages.css">
-		<link rel="stylesheet" href="css/mms.css">
+		<link rel="stylesheet" href="css/page_7.css">
 		<link rel="author" href="humans.txt">
 	</head>
 	<body>
@@ -268,16 +268,16 @@
                 </nav>				
 				<div class="pages__content__wrap">
 					<h1 class="pages__title">
-					MMS Management  
+					ניהול נוטיפיקציות
 					</h1>
 					<div class="search__block">
 						<form action="" class="search__form">
-							<input type="text" class="serch__input" placeholder='Campagin Name'>
+							<input type="text" class="serch__input" placeholder='שם נוטיפיקציה'>
 						</form>
 						<div class="send__method__select">
 							<select name="" id="" class="search__select" >
 								<option value="method_1" class="serch__option placeholder">
-									Sending method
+									סטטוס
 								</option>
 								<option value="method_1" class="serch__option">
 									method_1
@@ -293,16 +293,16 @@
 						</div>
 						<form action="" class='search__form'>
 							<label for="from">
-								<input type="date" placeholder='From date     ' id='from' class='date__input'>
+								<input type="date" placeholder='מתאריך     ' id='from' class='date__input'>
 							</label>
 						</form>
 						<form action="" class='search__form'>
 							<label for="to">
-								<input type="date" placeholder='To date     ' id='to' class='date__input'>
+								<input type="date" placeholder='עד תאריך     ' id='to' class='date__input'>
 							</label>
 						</form>
 						<button class="search__btn">
-							<span>Search</span>
+							<span>חיפוש</span>
 							<img src="imgs/pages/search_1.svg" alt="">
 						</button>
 					</div>
@@ -310,14 +310,16 @@
 						<div class="left__side">
 							<div class="buttons">
 								<button class="page__btn type__1">
-								Create MMS
+								צור נוטיפיקציה
 								</button>
 								<button class="page__btn type__3">
-								Restore Deleted
+								שחזור מחוקים
 								</button>
-								<button class="page__btn type__4">
-								<img src="imgs/pages/export.svg" alt="">
-								Export File
+								<button class="page__btn type__3">
+								הטמע סקריפט
+								</button>
+								<button class="page__btn type__3">
+								קבוצות
 								</button>
 							</div>
 							
@@ -332,16 +334,20 @@
 						</div>
 						<div class="right__side">
 							<p>
-								45 Compagins
+								45 נוטיפיקציות
 							</p>
 						</div>
 					</div>
 					<div class="table__wrap">
 						<div class="table__header__row table__row">
-							<h3 class="table__col__title">Camapign Name</h3>
-							<h3 class="table__col__title">Recipients</h3>
-							<h3 class="table__col__title">Messages</h3>
-							<h3 class="table__col__title">Status</h3>
+							<h3 class="table__col__title">שם אוטומציה</h3>
+							<h3 class="table__col__title multititle">
+								<span class="subtitle">לשליחה</span>
+								<span class="subtitle">נשלחו</span>
+								<span class="subtitle">שגויים</span>
+							</h3>
+							<h3 class="table__col__title">הקלקות</h3>
+							<h3 class="table__col__title">סטטוס</h3>
 						</div>
 						<div class="table__row">
 							<div class="table__col group__name">
@@ -354,14 +360,30 @@
 									</p>
 								</div>
 							</div>
-							<div class="table__col">
+							<div class="table__col multicol">
 								<div class="values">
 									<div class="value__block">
 										<p class="value">
 											48,468
 										</p>
 										<p class="value__title">
-											Recipients
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block type__3">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											שגויים
 										</p>
 									</div>
 								</div>
@@ -373,14 +395,14 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											הקלקות
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
 								<p class="status created">
-									Created
+									טיוטה
 								</p>
 							</div>
 							<div class="table__col">
@@ -418,30 +440,6 @@
 										</p>
 									</div>
 									<div class="action__block">
-										<img src="imgs/pages/row_ic_5.png" alt="" class="action__img">
-										<p class="action__title">
-											Settings
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
-										</p>
-									</div>
-									<div class="action__block">
 										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
 										<p class="action__title">
 											Delete
@@ -461,14 +459,30 @@
 									</p>
 								</div>
 							</div>
-							<div class="table__col">
+							<div class="table__col multicol">
 								<div class="values">
 									<div class="value__block">
 										<p class="value">
 											48,468
 										</p>
 										<p class="value__title">
-											Recipients
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block type__3">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											שגויים
 										</p>
 									</div>
 								</div>
@@ -480,14 +494,14 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											הקלקות
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
 								<p class="status sending">
-									Sending
+									בשליחה
 								</p>
 							</div>
 							<div class="table__col">
@@ -517,30 +531,6 @@
 										</p>
 									</div>
 									<div class="action__block">
-										<img src="imgs/pages/row_ic_5.png" alt="" class="action__img">
-										<p class="action__title">
-											Settings
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
-										</p>
-									</div>
-									<div class="action__block">
 										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
 										<p class="action__title">
 											Delete
@@ -560,14 +550,30 @@
 									</p>
 								</div>
 							</div>
-							<div class="table__col">
+							<div class="table__col multicol">
 								<div class="values">
 									<div class="value__block">
 										<p class="value">
 											48,468
 										</p>
 										<p class="value__title">
-											Recipients
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block type__3">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											שגויים
 										</p>
 									</div>
 								</div>
@@ -579,14 +585,14 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											הקלקות
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
 								<p class="status sent">
-									Sent
+									נשלח
 								</p>
 							</div>
 							<div class="table__col">
@@ -616,30 +622,6 @@
 										</p>
 									</div>
 									<div class="action__block">
-										<img src="imgs/pages/row_ic_5.png" alt="" class="action__img">
-										<p class="action__title">
-											Settings
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
-										</p>
-									</div>
-									<div class="action__block">
 										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
 										<p class="action__title">
 											Delete
@@ -659,14 +641,30 @@
 									</p>
 								</div>
 							</div>
-							<div class="table__col">
+							<div class="table__col multicol">
 								<div class="values">
 									<div class="value__block">
 										<p class="value">
 											48,468
 										</p>
 										<p class="value__title">
-											Recipients
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block type__3">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											שגויים
 										</p>
 									</div>
 								</div>
@@ -678,14 +676,14 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											הקלקות
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
 								<p class="status created">
-									Created
+									טיוטה
 								</p>
 							</div>
 							<div class="table__col">
@@ -723,30 +721,6 @@
 										</p>
 									</div>
 									<div class="action__block">
-										<img src="imgs/pages/row_ic_5.png" alt="" class="action__img">
-										<p class="action__title">
-											Settings
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
-										</p>
-									</div>
-									<div class="action__block">
 										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
 										<p class="action__title">
 											Delete
@@ -766,14 +740,30 @@
 									</p>
 								</div>
 							</div>
-							<div class="table__col">
+							<div class="table__col multicol">
 								<div class="values">
 									<div class="value__block">
 										<p class="value">
 											48,468
 										</p>
 										<p class="value__title">
-											Recipients
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block type__3">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											שגויים
 										</p>
 									</div>
 								</div>
@@ -785,14 +775,14 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											הקלקות
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
 								<p class="status sending">
-									Sending
+									בשליחה
 								</p>
 							</div>
 							<div class="table__col">
@@ -819,30 +809,6 @@
 										<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Groups
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5.png" alt="" class="action__img">
-										<p class="action__title">
-											Settings
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -865,14 +831,30 @@
 									</p>
 								</div>
 							</div>
-							<div class="table__col">
+							<div class="table__col multicol">
 								<div class="values">
 									<div class="value__block">
 										<p class="value">
 											48,468
 										</p>
 										<p class="value__title">
-											Recipients
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											סה"כ
+										</p>
+									</div>
+									<div class="value__block type__3">
+										<p class="value">
+											48,468
+										</p>
+										<p class="value__title">
+											שגויים
 										</p>
 									</div>
 								</div>
@@ -884,14 +866,14 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											הקלקות
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
 								<p class="status sent">
-									Sent
+									נשלח
 								</p>
 							</div>
 							<div class="table__col">
@@ -918,30 +900,6 @@
 										<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Groups
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5.png" alt="" class="action__img">
-										<p class="action__title">
-											Settings
-										</p>
-									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -966,7 +924,7 @@
 									</p>
 								</div>
 								<p class="status created">
-									Created
+									טיוטה
 								</p>
 							</div>
 							<div class="actions">
@@ -985,9 +943,9 @@
 									</p>
 								</div>
 								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
+									<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 									<p class="action__title">
-										Share
+										Groups
 									</p>
 								</div>
 								<div class="action__block">
@@ -1009,7 +967,7 @@
 									</p>
 								</div>
 								<p class="status sending">
-									Sending
+									בשליחה
 								</p>
 							</div>
 							<div class="actions">
@@ -1020,9 +978,9 @@
 									</p>
 								</div>
 								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
+									<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 									<p class="action__title">
-										Share
+										Groups
 									</p>
 								</div>
 								<div class="action__block">
@@ -1044,7 +1002,7 @@
 									</p>
 								</div>
 								<p class="status sent">
-									Sent
+									נשלח
 								</p>
 							</div>
 							<div class="actions">
@@ -1055,9 +1013,9 @@
 									</p>
 								</div>
 								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
+									<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 									<p class="action__title">
-										Share
+										Groups
 									</p>
 								</div>
 								<div class="action__block">
@@ -1072,14 +1030,14 @@
 							<div class="title__block">
 								<div class="group__info__block">
 									<p class="group__name">
-										לקוחות פעילים
+										ניסיון 2 - דיוור דוג' כרמלה שם ארוך יותר משורה
 									</p>
 									<p class="group__info">
 										Last update 13.11.2020 06:24
 									</p>
 								</div>
 								<p class="status created">
-									Created
+									טיוטה
 								</p>
 							</div>
 							<div class="actions">
@@ -1098,9 +1056,9 @@
 									</p>
 								</div>
 								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
+									<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 									<p class="action__title">
-										Share
+										Groups
 									</p>
 								</div>
 								<div class="action__block">
@@ -1122,7 +1080,7 @@
 									</p>
 								</div>
 								<p class="status sending">
-									Sending
+									בשליחה
 								</p>
 							</div>
 							<div class="actions">
@@ -1133,9 +1091,9 @@
 									</p>
 								</div>
 								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
+									<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 									<p class="action__title">
-										Share
+										Groups
 									</p>
 								</div>
 								<div class="action__block">
@@ -1157,7 +1115,7 @@
 									</p>
 								</div>
 								<p class="status sent">
-									Sent
+									נשלח
 								</p>
 							</div>
 							<div class="actions">
@@ -1168,9 +1126,9 @@
 									</p>
 								</div>
 								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
+									<img src="imgs/pages/row_ic_4(1).png" alt="" class="action__img">
 									<p class="action__title">
-										Share
+										Groups
 									</p>
 								</div>
 								<div class="action__block">

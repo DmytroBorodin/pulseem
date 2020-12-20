@@ -189,23 +189,58 @@ p.group__name {
 .value__block {
     width: 100%;
 }
-.status {
+
+.switch__btn {
+	width: 4rem;
+	height: 2.5rem;
+	position: relative;
+	input[type='checkbox'] {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 100%;
+		height: 100%;
+		border-radius: 2.5rem;
+		border: 0.2rem solid #F02039;
+		transition: all 0.3s ease;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-sizing: border-box;
+			display: block;
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			border: 0.2rem solid #F02039;
+			transition: all 0.3s ease;
+		}
+	}
+	input:checked[type='checkbox'] {
+		background-color: #27AE60;
+		border: 0.2rem solid #27AE60;
+		&:before {
+			left: 100%;
+			border: 0.2rem solid #27AE60;
+			background-color: #fff;
+			transform: translateX(-100%);
+		}
+	}
+}
+.switch__title {
+	margin-top: 0.3rem;
 	font-size: 1.8rem;
 	line-height: 2.4rem;
-	font-weight: 700;
-	width: 100%;
 	text-align: center;
-	align-self: center;
-	&.created {
-		color: #0371AD;
+	transition: all 0.3s ease;
+	&.inactive {
+		color: #F02039;
 	}
-	&.sending {
-		color: #F59A23;
-	}
-	&.sent {
+	&.active {
 		color: #27AE60;
 	}
 }
+
 .actions {
     justify-content: flex-end;
 }
@@ -247,17 +282,7 @@ p.group__name {
 		}
 	}
 	.buttons {
-		display: block!important;
-		width: 100%;
-		order: 2;
-		margin-top: 3.43%;
-		.type__1 {
-			min-width: 17.8rem;
-			width: 35.86%;
-		}
-		.type__3, .type__4 {
-			display: none;
-		}
+		display: none;
 	}
 	.search__block {
 	    display: none;
@@ -274,16 +299,69 @@ p.group__name {
 		text-align: right;
 	}
 	.mobile__table__row {
-		.action__block {
-			margin-right: 3.5%;
-			&:last-child {
-				margin-right: 0%;
+		.actions {
+			width: 55%;
+		}
+		
+		.inner__row {
+			display: flex;
+			justify-content: space-between;
+			.values {
+				width: 45%;
+			}
+			.value__block {
+				align-items: center;
+				margin-right: 5%;
 			}
 		}
 	}
+	.switch {
+		justify-content: space-between;
+	}
+
+	.switch__title {
+		line-height: 1;
+		font-size: 1.5rem;
+		margin-top: 0.4rem;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.mobile__table__row {
+		.action__block {
+		    img {
+		    	width: 2.5rem;
+		    	margin: 0 auto 0.5rem;
+		    }
+		}
+		.value__block {
+			font-size: 1.4rem;
+		}
+	}
+
+	.switch__btn {
+		width: 3rem;
+		height: 1.9rem;
+		input[type='checkbox'] {
+			border-radius: 1.5rem;
+			&:before {
+				width: 1.9rem;
+				height: 1.9rem;
+			}
+		}
+	}
+
 }
 @media screen and (max-width: 350px) {
 	.mobile__table__row {
 		padding: 3.71% 4.29% 3.43% 5.14%;
+		.actions {
+		    width: 65%;
+		}
+		.inner__row {
+			.values {
+			    width: 35%;
+			}
+		}
 	}
 }

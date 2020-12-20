@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>MMS Management</title>
+		<title>Automation Management</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/pages.css">
-		<link rel="stylesheet" href="css/mms.css">
+		<link rel="stylesheet" href="css/automation.css">
 		<link rel="author" href="humans.txt">
 	</head>
 	<body>
@@ -268,7 +268,7 @@
                 </nav>				
 				<div class="pages__content__wrap">
 					<h1 class="pages__title">
-					MMS Management  
+					Automation Management  
 					</h1>
 					<div class="search__block">
 						<form action="" class="search__form">
@@ -310,14 +310,10 @@
 						<div class="left__side">
 							<div class="buttons">
 								<button class="page__btn type__1">
-								Create MMS
+								Create Automation
 								</button>
 								<button class="page__btn type__3">
 								Restore Deleted
-								</button>
-								<button class="page__btn type__4">
-								<img src="imgs/pages/export.svg" alt="">
-								Export File
 								</button>
 							</div>
 							
@@ -332,15 +328,15 @@
 						</div>
 						<div class="right__side">
 							<p>
-								45 Compagins
+								45 Automations
 							</p>
 						</div>
 					</div>
 					<div class="table__wrap">
 						<div class="table__header__row table__row">
-							<h3 class="table__col__title">Camapign Name</h3>
+							<h3 class="table__col__title">Automation Name</h3>
 							<h3 class="table__col__title">Recipients</h3>
-							<h3 class="table__col__title">Messages</h3>
+							<h3 class="table__col__title">Days Active</h3>
 							<h3 class="table__col__title">Status</h3>
 						</div>
 						<div class="table__row">
@@ -373,26 +369,23 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											Days
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
-								<p class="status created">
-									Created
-								</p>
+								<div class="value__block switch">
+									<div class="switch__btn">
+										<input type="checkbox">
+									</div>
+									<p class="switch__title inactive">
+										Inactive
+									</p>
+								</div>
 							</div>
 							<div class="table__col">
 								<div class="actions">
-									<div class="action__block">
-										<div class="send">
-											<img src="imgs/pages/row_ic_0.png" alt="" class="action__img">
-											<p class="action__title">
-												Send
-											</p>
-										</div>
-									</div>
 									<div class="action__block">
 										<img src="imgs/pages/row_ic_1.png" alt="" class="action__img">
 										<p class="action__title">
@@ -423,22 +416,10 @@
 											Settings
 										</p>
 									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
 									<div class="action__block disabled">
 										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -480,15 +461,20 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											Days
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
-								<p class="status sending">
-									Sending
-								</p>
+								<div class="value__block switch">
+									<div class="switch__btn">
+										<input type="checkbox">
+									</div>
+									<p class="switch__title inactive">
+										Inactive
+									</p>
+								</div>
 							</div>
 							<div class="table__col">
 								<div class="actions">
@@ -522,22 +508,10 @@
 											Settings
 										</p>
 									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
 									<div class="action__block disabled">
 										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -579,15 +553,20 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											Days
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
-								<p class="status sent">
-									Sent
-								</p>
+								<div class="value__block switch">
+									<div class="switch__btn">
+										<input type="checkbox">
+									</div>
+									<p class="switch__title inactive">
+										Inactive
+									</p>
+								</div>
 							</div>
 							<div class="table__col">
 								<div class="actions">
@@ -621,22 +600,10 @@
 											Settings
 										</p>
 									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
 									<div class="action__block disabled">
 										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -678,26 +645,23 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											Days
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
-								<p class="status created">
-									Created
-								</p>
+								<div class="value__block switch">
+									<div class="switch__btn">
+										<input type="checkbox">
+									</div>
+									<p class="switch__title inactive">
+										Inactive
+									</p>
+								</div>
 							</div>
 							<div class="table__col">
 								<div class="actions">
-									<div class="action__block">
-										<div class="send">
-											<img src="imgs/pages/row_ic_0.png" alt="" class="action__img">
-											<p class="action__title">
-												Send
-											</p>
-										</div>
-									</div>
 									<div class="action__block">
 										<img src="imgs/pages/row_ic_1.png" alt="" class="action__img">
 										<p class="action__title">
@@ -728,22 +692,10 @@
 											Settings
 										</p>
 									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
 									<div class="action__block disabled">
 										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -785,15 +737,20 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											Days
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
-								<p class="status sending">
-									Sending
-								</p>
+								<div class="value__block switch">
+									<div class="switch__btn">
+										<input type="checkbox">
+									</div>
+									<p class="switch__title inactive">
+										Inactive
+									</p>
+								</div>
 							</div>
 							<div class="table__col">
 								<div class="actions">
@@ -827,22 +784,10 @@
 											Settings
 										</p>
 									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
 									<div class="action__block disabled">
 										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -884,15 +829,20 @@
 											2
 										</p>
 										<p class="value__title">
-											Messages
+											Days
 										</p>
 									</div>
 								</div>
 							</div>
 							<div class="table__col">
-								<p class="status sent">
-									Sent
-								</p>
+								<div class="value__block switch">
+									<div class="switch__btn">
+										<input type="checkbox">
+									</div>
+									<p class="switch__title inactive">
+										Inactive
+									</p>
+								</div>
 							</div>
 							<div class="table__col">
 								<div class="actions">
@@ -926,22 +876,10 @@
 											Settings
 										</p>
 									</div>
-									<div class="action__block">
-										<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-										<p class="action__title">
-											Share
-										</p>
-									</div>
 									<div class="action__block disabled">
 										<img src="imgs/pages/row_ic_6(1).png" alt="" class="action__img">
 										<p class="action__title">
 											Reports
-										</p>
-									</div>
-									<div class="action__block disabled">
-										<img src="imgs/pages/row_ic_6.png" alt="" class="action__img">
-										<p class="action__title">
-											Automation
 										</p>
 									</div>
 									<div class="action__block">
@@ -965,149 +903,155 @@
 										Last update 13.11.2020 06:24
 									</p>
 								</div>
-								<p class="status created">
-									Created
-								</p>
 							</div>
-							<div class="actions">
-								<div class="action__block">
-									<div class="send">
-										<img src="imgs/pages/row_ic_0.png" alt="" class="action__img">
-										<p class="action__title">
-											Send
+							<div class="inner__row">
+								<div class="values">
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											Recipients
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											<span>Days</span>
 										</p>
 									</div>
 								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Duplicate
-									</p>
-								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Share
-									</p>
-								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
-									<p class="action__title">
-										Delete
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="mobile__table__row">
-							<div class="title__block">
-								<div class="group__info__block">
-									<p class="group__name">
-										לקוחות פעילים
-									</p>
-									<p class="group__info">
-										Last update 13.11.2020 06:24
-									</p>
-								</div>
-								<p class="status sending">
-									Sending
-								</p>
-							</div>
-							<div class="actions">
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Duplicate
-									</p>
-								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Share
-									</p>
-								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
-									<p class="action__title">
-										Delete
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="mobile__table__row">
-							<div class="title__block">
-								<div class="group__info__block">
-									<p class="group__name">
-										לקוחות פעילים
-									</p>
-									<p class="group__info">
-										Last update 13.11.2020 06:24
-									</p>
-								</div>
-								<p class="status sent">
-									Sent
-								</p>
-							</div>
-							<div class="actions">
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Duplicate
-									</p>
-								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Share
-									</p>
-								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
-									<p class="action__title">
-										Delete
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="mobile__table__row">
-							<div class="title__block">
-								<div class="group__info__block">
-									<p class="group__name">
-										לקוחות פעילים
-									</p>
-									<p class="group__info">
-										Last update 13.11.2020 06:24
-									</p>
-								</div>
-								<p class="status created">
-									Created
-								</p>
-							</div>
-							<div class="actions">
-								<div class="action__block">
-									<div class="send">
-										<img src="imgs/pages/row_ic_0.png" alt="" class="action__img">
+								<div class="actions">
+									<div class="value__block switch">
+										<div class="switch__btn">
+											<input type="checkbox">
+										</div>
+										<p class="switch__title inactive">
+											Inactive
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
 										<p class="action__title">
-											Send
+											Duplicate
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
+										<p class="action__title">
+											Delete
 										</p>
 									</div>
 								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Duplicate
+							</div>
+						</div>
+						<div class="mobile__table__row">
+							<div class="title__block">
+								<div class="group__info__block">
+									<p class="group__name">
+										ניסיון 2 - דיוור דוג' כרמלה שם ארוך יותר משורה
+									</p>
+									<p class="group__info">
+										Last update 13.11.2020 06:24
 									</p>
 								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Share
+							</div>
+							<div class="inner__row">
+								<div class="values">
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											Recipients
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											<span>Days</span>
+										</p>
+									</div>
+								</div>
+								<div class="actions">
+									<div class="value__block switch">
+										<div class="switch__btn">
+											<input type="checkbox">
+										</div>
+										<p class="switch__title inactive">
+											Inactive
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
+										<p class="action__title">
+											Duplicate
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
+										<p class="action__title">
+											Delete
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mobile__table__row">
+							<div class="title__block">
+								<div class="group__info__block">
+									<p class="group__name">
+										ניסיון 2 - דיוור דוג' כרמלה שם ארוך יותר משורה
+									</p>
+									<p class="group__info">
+										Last update 13.11.2020 06:24
 									</p>
 								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
-									<p class="action__title">
-										Delete
-									</p>
+							</div>
+							<div class="inner__row">
+								<div class="values">
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											Recipients
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											<span>Days</span>
+										</p>
+									</div>
+								</div>
+								<div class="actions">
+									<div class="value__block switch">
+										<div class="switch__btn">
+											<input type="checkbox">
+										</div>
+										<p class="switch__title inactive">
+											Inactive
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
+										<p class="action__title">
+											Duplicate
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
+										<p class="action__title">
+											Delete
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1121,28 +1065,47 @@
 										Last update 13.11.2020 06:24
 									</p>
 								</div>
-								<p class="status sending">
-									Sending
-								</p>
 							</div>
-							<div class="actions">
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Duplicate
-									</p>
+							<div class="inner__row">
+								<div class="values">
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											Recipients
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											<span>Days</span>
+										</p>
+									</div>
 								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Share
-									</p>
-								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
-									<p class="action__title">
-										Delete
-									</p>
+								<div class="actions">
+									<div class="value__block switch">
+										<div class="switch__btn">
+											<input type="checkbox">
+										</div>
+										<p class="switch__title inactive">
+											Inactive
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
+										<p class="action__title">
+											Duplicate
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
+										<p class="action__title">
+											Delete
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1156,28 +1119,101 @@
 										Last update 13.11.2020 06:24
 									</p>
 								</div>
-								<p class="status sent">
-									Sent
-								</p>
 							</div>
-							<div class="actions">
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Duplicate
+							<div class="inner__row">
+								<div class="values">
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											Recipients
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											<span>Days</span>
+										</p>
+									</div>
+								</div>
+								<div class="actions">
+									<div class="value__block switch">
+										<div class="switch__btn">
+											<input type="checkbox">
+										</div>
+										<p class="switch__title inactive">
+											Inactive
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
+										<p class="action__title">
+											Duplicate
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
+										<p class="action__title">
+											Delete
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mobile__table__row">
+							<div class="title__block">
+								<div class="group__info__block">
+									<p class="group__name">
+										לקוחות פעילים
+									</p>
+									<p class="group__info">
+										Last update 13.11.2020 06:24
 									</p>
 								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_5(1).png" alt="" class="action__img">
-									<p class="action__title">
-										Share
-									</p>
+							</div>
+							<div class="inner__row">
+								<div class="values">
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											Recipients
+										</p>
+									</div>
+									<div class="value__block">
+										<p class="value">
+											2
+										</p>
+										<p class="value__title">
+											<span>Days</span>
+										</p>
+									</div>
 								</div>
-								<div class="action__block">
-									<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
-									<p class="action__title">
-										Delete
-									</p>
+								<div class="actions">
+									<div class="value__block switch">
+										<div class="switch__btn">
+											<input type="checkbox">
+										</div>
+										<p class="switch__title inactive">
+											Inactive
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_3(1).png" alt="" class="action__img">
+										<p class="action__title">
+											Duplicate
+										</p>
+									</div>
+									<div class="action__block">
+										<img src="imgs/pages/row_ic_7.png" alt="" class="action__img">
+										<p class="action__title">
+											Delete
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1208,6 +1244,7 @@
 				</div>
 			</main>
 		</div>
+		<script src="js/automation.js"></script>
 		<script src="js/pages.js"></script>
 	</body>
 </html>

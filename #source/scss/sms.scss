@@ -67,9 +67,6 @@
 
 /* RTL end */
 
-.sidebar {
-	max-height: 100%;
-}
 .search__block {
 	display: flex;
 	padding: 1.7rem 0 0 0;
@@ -115,6 +112,7 @@
 	border: 1px solid #797979;
 	border-radius: 2px;
 	padding: 0.7rem 0.8rem 0.6rem 1.5rem;
+	font-family: "Assistant";
 	font-size: inherit;
 	color: #797979;
 	cursor: pointer;

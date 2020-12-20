@@ -67,9 +67,6 @@
 
 /* RTL end */
 
-.sidebar {
-	max-height: 100%;
-}
 .search__block {
 	display: flex;
 	padding: 1.7rem 0 0 0;
@@ -116,6 +113,7 @@
 	border-radius: 2px;
 	padding: 0.7rem 0.8rem 0.6rem 1.5rem;
 	font-size: inherit;
+	font-family: "Assistant";
 	color: #797979;
 	cursor: pointer;
 	&:focus {
@@ -125,6 +123,9 @@
 		font-family: "Assistant";
 		color: #797979;
 	}
+}
+.date__input::-placeholder {
+	font-family: "Assistant";
 }
 .date__input[type="date"]:before{
 	appearance: none;
