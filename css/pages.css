@@ -11,6 +11,21 @@
   margin-left: 1.2rem;
   margin-right: 0;
 }
+.wrap.rtl .serach__icon {
+  right: calc(100% - 0.2rem);
+  transform: translate(100%, -50%);
+}
+.wrap.rtl .serach__form input {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.6rem;
+  border: 1px solid #797979;
+  padding: 0.6rem 1.1rem 0.7rem 3.2rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #333333;
+}
 .wrap.rtl .table__col {
   border-left: 1px solid #797979;
   border-right: none;
@@ -33,7 +48,12 @@
   transform: rotate(0);
 }
 .wrap.rtl .pages__footer .right__side .page__num__btn {
+  width: 3rem 3rem;
+  text-align: center;
   margin: 0 1rem;
+}
+.wrap.rtl .pages__footer .right__side .page__num__btn::placeholder {
+  text-align: center;
 }
 .wrap.rtl .change__quantity {
   margin-left: 0;
@@ -87,7 +107,7 @@
 }
 
 .pages__content__wrap {
-  padding: 2% 1.93% 3.7%;
+  padding: 1.4% 1.93% 3.7%;
   height: auto;
 }
 
@@ -212,7 +232,7 @@
 
 .table__row {
   width: 100%;
-  padding: 1.8rem 0;
+  padding: 1.7rem 0;
   display: grid;
   grid-template-columns: 3.3fr 3.69fr 3.75fr 5.65fr;
   border-bottom: 1px solid #797979;
@@ -346,6 +366,7 @@ p.full__group__name.active {
 }
 
 .action__block {
+  min-width: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -434,6 +455,10 @@ p.full__group__name.active {
   font-size: 1.6rem;
   color: #333333;
   border: 1px solid #797979;
+  text-align: center;
+}
+.page__num__btn::placeholder {
+  text-align: center;
 }
 
 @media screen and (min-width: 1921px) {
@@ -613,6 +638,8 @@ p.full__group__name.active {
   }
 
   .pages__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
     text-align: center;
   }
 
@@ -620,11 +647,21 @@ p.full__group__name.active {
     margin-left: 1.93%;
   }
 
+  .action__block {
+    min-width: 0;
+  }
+
   .pages__footer {
     display: none;
   }
 }
 @media screen and (max-width: 350px) {
+  .pages__title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: center;
+  }
+
   .mobile__table__row {
     padding: 2%;
   }
