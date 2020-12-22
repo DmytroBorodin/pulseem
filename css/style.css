@@ -910,6 +910,8 @@ button.faq span {
 @media screen and (max-width: 1200px) {
   body.locked, html.locked, .wrap.locked {
     overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sidebar {
