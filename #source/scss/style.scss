@@ -851,8 +851,6 @@ button.faq {
 @media screen and (max-width: 1200px) {
   body.locked, html.locked, .wrap.locked{
     overflow: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling:touch;
   }
   .sidebar {
     position: absolute;
@@ -872,7 +870,8 @@ button.faq {
   }
   .sidebar.active {
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling:touch;
   }
   .sidebar__block {
     width: 350px;
