@@ -511,6 +511,7 @@ p.full__group__name.active {
 @media screen and (max-width: 1200px) {
   .sidebar {
     max-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 }
 @media screen and (max-width: 1100px) {
