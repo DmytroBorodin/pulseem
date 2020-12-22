@@ -18,13 +18,15 @@ burgerBtn.addEventListener('click', () => {
 navBurgerBtn.addEventListener('click', () => {
 	sideBar.classList.add('active');
 	body.classList.add('locked');
+	html.classList.add('locked');
+	wrap.classList.add('locked');
 });
 closeMenuBtn.addEventListener('click', () => {
 	sideBar.classList.remove('active');
 	body.classList.remove('locked');
-	console.log('close');
+	html.classList.remove('locked');
+	wrap.classList.remove('locked');
 })
-
 let selectBlock = document.querySelector('.languages');
 let lanuagesArr = [...selectBlock.querySelectorAll('.option')];
 
