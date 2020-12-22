@@ -27,6 +27,27 @@ closeMenuBtn.addEventListener('click', () => {
 	html.classList.remove('locked');
 	wrap.classList.remove('locked');
 })
+
+
+// menu and submenu lists settings
+
+let menuLinksArr = [...document.querySelectorAll('.menu__link')];
+let submenusArr = [...document.querySelectorAll('.submenu__list')];
+
+menuLinksArr.forEach(link => {
+	let linkId = link.getAttribute('linkname');
+	link.addEventListener('click', () => {
+		for (let i = 0; i < submenusArr.length; i++) {
+			submenusArr[i].classList.remove('active');
+			let submenuId = submenusArr[i].getAttribute('id');
+			if (submenuId == linkId) {
+				submenusArr[i].classList.add('active');
+			}
+		}
+	})
+})
+
+
 let selectBlock = document.querySelector('.languages');
 let lanuagesArr = [...selectBlock.querySelectorAll('.option')];
 
