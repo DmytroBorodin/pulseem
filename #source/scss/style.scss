@@ -857,8 +857,8 @@ button.faq {
     top: 0;
     left: 0;
     width:0%;
-    height: 100%;
-    max-height: 100vh;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 12;
     transition: all 0.3s ease;
