@@ -908,7 +908,7 @@ button.faq span {
   }
 }
 @media screen and (max-width: 1200px) {
-  body.locked {
+  body.locked, html.locked {
     overflow: hidden;
   }
 
