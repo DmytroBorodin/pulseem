@@ -364,6 +364,7 @@ p.full__group__name.active {
 .actions {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
 }
@@ -464,11 +465,6 @@ p.full__group__name.active {
   text-align: center;
 }
 
-@media screen and (min-width: 1921px) {
-  html {
-    font-size: 12px;
-  }
-}
 @media screen and (min-width: 2300px) {
   html {
     font-size: 12.5px;
@@ -484,6 +480,11 @@ p.full__group__name.active {
     font-size: 16px;
   }
 }
+@media screen and (min-height: 1080px) and (min-width: 1920px) and (max-height: 1560px) and (max-width: 2300px) {
+  html {
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 1700px) {
   .table__col.group__name {
     align-items: center;
@@ -494,7 +495,6 @@ p.full__group__name.active {
   }
 
   .actions {
-    flex-wrap: wrap;
     justify-content: flex-start;
   }
 
