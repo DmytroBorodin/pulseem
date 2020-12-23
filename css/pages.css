@@ -500,7 +500,7 @@ p.full__group__name.active {
   .pages__content__wrap.recipient .actions {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .table__col.group__name {

@@ -498,7 +498,7 @@ and (max-height: 1560px) and (max-width: 2300px) {
 		.actions {
 			width: 100%;
 			display: flex;
-			flex-wrap: nowrap;
+			flex-wrap: wrap;
 		}
 	}
 	.table__col.group__name {
