@@ -125,6 +125,9 @@
 .pages__content__wrap {
 	padding: 1.4% 1.93% 3.7%;
 	height: auto;
+	&.recipient {
+		padding: 1.4% 1.93% 2.8%;
+	}
 }
 .pages__title {
 	font-size: 3rem;
@@ -620,6 +623,9 @@ p.full__group__name.active {
 	.pages__content__wrap {
 		margin-top: 5.71%;
 		padding: 0;
+		&.recipient {
+			padding: 0;
+		}
 		height: auto;
 	}
 	.pages__title {

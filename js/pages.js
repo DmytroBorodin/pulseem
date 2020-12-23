@@ -57,24 +57,6 @@ let setElement = (elName, elClass, elCont) => {
 }
 
 
-// menu and submenu lists settings
-
-let menuLinksArr = [...document.querySelectorAll('.menu__link')];
-let submenusArr = [...document.querySelectorAll('.submenu__list')];
-
-menuLinksArr.forEach(link => {
-	let linkId = link.getAttribute('linkname');
-	link.addEventListener('click', () => {
-		for (let i = 0; i < submenusArr.length; i++) {
-			submenusArr[i].classList.remove('active');
-			let submenuId = submenusArr[i].getAttribute('id');
-			if (submenuId == linkId) {
-				submenusArr[i].classList.add('active');
-			}
-		}
-	})
-})
-
 //change language and page direction
 
 console.log(window.innerWidth);
