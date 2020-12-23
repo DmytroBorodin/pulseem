@@ -371,7 +371,6 @@ p.full__group__name.active {
 
 .action__block {
   min-width: 8rem;
-  margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -492,11 +491,16 @@ p.full__group__name.active {
     font-size: 10px;
   }
 }
+@media screen and (max-width: 1890px) {
+  .action__block {
+    margin: 0.5rem 0;
+  }
+}
 @media screen and (max-width: 1700px) {
   .pages__content__wrap.recipient .actions {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .table__col.group__name {
