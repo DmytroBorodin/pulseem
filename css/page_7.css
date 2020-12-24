@@ -253,6 +253,11 @@ p.group__name {
     grid-template-columns: 3.3fr 3.61fr 1.44fr 1.29fr 6.75fr;
   }
 }
+@media screen and (max-width: 1473px) {
+  .actions {
+    justify-content: flex-start;
+  }
+}
 @media screen and (max-width: 1440px) {
   .table__row {
     grid-template-columns: 3.3fr 4.01fr 1.44fr 1.59fr 6.05fr;

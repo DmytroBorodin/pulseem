@@ -95,7 +95,15 @@ p.group__name {
 .action__block {
 	justify-content: flex-end;
 	margin-right: 1.66%;
+	min-width: 11.8rem;
+	margin-right: 0;
 	width: auto;
+}
+
+@media screen and (max-width: 1918px) {
+	.actions {
+	    justify-content: flex-start;
+	}
 }
 
 @media screen and (max-width: 1440px) {
@@ -129,8 +137,10 @@ p.group__name {
 	.mobile__table__row {
 		.actions {
 			width: 58%;
+			justify-content: flex-end;
 		}
 		.action__block {
+			min-width: 0;
 			margin-right: 5%;
 			&:last-child {
 				margin-right: -5%;

@@ -263,6 +263,11 @@ p.group__name {
   width: auto;
 }
 
+@media screen and (max-width: 1460px) {
+  .actions {
+    justify-content: flex-start;
+  }
+}
 @media screen and (max-width: 1440px) {
   .table__row {
     grid-template-columns: 3.3fr 1.87fr 2.04fr 1.53fr 7.84fr;
@@ -302,6 +307,7 @@ p.group__name {
 
   .mobile__table__row .actions {
     width: 58%;
+    justify-content: flex-end;
   }
   .mobile__table__row .action__block {
     margin-right: 5%;
