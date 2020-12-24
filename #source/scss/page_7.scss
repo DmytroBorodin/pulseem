@@ -254,6 +254,9 @@ p.group__name {
 	.actions {
 	    justify-content: flex-start;
 	}
+	.action__block {
+		width: 20%;
+	}
 }
 
 @media screen and (max-width: 1440px) {
@@ -262,9 +265,25 @@ p.group__name {
 	}
 }
 
+@media screen and (max-width: 1380px) {
+	.action__block {
+		width: 25%;
+	}
+}
+
 @media screen and (max-width: 1100px) {
 	.table__row {
 	    grid-template-columns: 3.3fr 4.01fr 1.89fr 1.89fr 5.30fr;
+	}
+}
+@media screen and (max-width: 1090px) {
+	.action__block {
+		width: 33.3333%;
+	}
+}
+@media screen and (max-width: 880px) {
+	.action__block {
+		width: 50%;
 	}
 }
 

@@ -237,6 +237,10 @@ p.group__name {
 	.actions {
 	    justify-content: flex-start;
 	}
+	.action__block {
+		width: 20%;
+		margin-right: 0;
+	}
 }
 
 @media screen and (max-width: 1300px) {
