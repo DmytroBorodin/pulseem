@@ -262,6 +262,10 @@ p.group__name {
     display: block;
   }
 
+  p.group__name {
+    padding-right: 4%;
+  }
+
   .status {
     width: auto;
     align-self: flex-start;

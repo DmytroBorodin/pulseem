@@ -76,7 +76,7 @@
     padding: 0;
   }
   .wrap.rtl .mobile__table__row p.group__name {
-    padding-left: 0;
+    padding-left: 4%;
   }
   .wrap.rtl .title__block .group__name, .wrap.rtl .title__block .group__info {
     text-align: right;
@@ -600,6 +600,7 @@ p.full__group__name.active {
   }
 
   p.group__name {
+    padding-right: 4%;
     padding-left: 0;
   }
 

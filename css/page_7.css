@@ -324,6 +324,10 @@ p.group__name {
     text-align: right;
   }
 
+  p.group__name {
+    padding-right: 4%;
+  }
+
   .mobile__table__row .action__block {
     margin-right: 3.5%;
   }
