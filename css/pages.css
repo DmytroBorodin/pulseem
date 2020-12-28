@@ -94,6 +94,10 @@
   }
 }
 /* RTL end */
+::-webkit-scrollbar {
+  display: none;
+}
+
 .wrap {
   background-color: #fff;
   height: 100vh;
