@@ -1082,6 +1082,10 @@ button.faq span {
     transform: translate(-80%, 100%);
   }
 
+  .main {
+    height: 100%;
+  }
+
   .main__wrap {
     background: #fff;
   }
@@ -1108,6 +1112,10 @@ button.faq span {
   .content__wrap {
     width: 100%;
     order: 2;
+    overflow: visible;
+  }
+  .content__wrap .container {
+    background: #fff;
   }
 
   .shortcard__add__block {
